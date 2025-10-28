@@ -1,0 +1,873 @@
+Ordered List
+
+   <ol>
+
+   <li>
+
+   a) type        : 1, A, a, i, I 
+
+   b) start
+
+   c) reversed 
+
+
+
+FAQ’s:
+
+   1. How to display list items side by side?
+
+   A. By using
+
+           a) display “inline” for <li> element, but it effects the numbering style.
+
+           b) display “flex” for <ol> element with direction “row”, it keeps numbering side by side.
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        .child-list  {
+
+            display: flex;
+
+            flex-direction: row;
+
+            margin-top: 20px;
+
+        }
+
+        .child-list li {
+
+            margin-right: 100px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+   <ol>
+
+      <li> __________ elements doesn't require end token. 
+
+           <ol type="a" class="child-list">
+
+                <li>Normal</li>
+
+                <li>Void</li>
+
+                <li>RC</li>
+
+                <li>Raw Text</li>
+
+           </ol>
+
+      </li>
+
+   </ol>
+
+</body>
+
+</html>
+
+
+
+
+
+   2. How to display in multiple columns?
+
+   A. By using
+
+           a) display “grid” 
+
+           b) columns of CSS
+
+
+
+Syntax:
+
+        ol {
+
+           display: grid;
+
+           grid-template-columns: 6fr 6fr;
+
+        }
+
+
+
+       ol {
+
+           columns: 2
+
+       }
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        .child-list  {
+
+            margin-top: 20px;
+
+            columns: 2;
+
+        }
+
+        li {
+
+            margin-top: 10px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+   <ol>
+
+      <li> __________ elements doesn't require end token. 
+
+           <ol type="a" class="child-list">
+
+                <li>Normal</li>
+
+                <li>Void</li>
+
+                <li>RC</li>
+
+                <li>Raw Text</li>
+
+           </ol>
+
+      </li>
+
+   </ol>
+
+</body>
+
+</html>
+
+
+
+
+
+   3. How to design scrollable list?
+
+   A. By using CSS “overflow” set to auto according to width and height. 
+
+
+
+Syntax:
+
+           ol {
+
+                width: 100px;
+
+                border: 1px solid gray;
+
+                padding: 10px;
+
+                overflow: auto;
+
+                height: 100px;
+
+           }
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+       ol {
+
+          width: 100px;
+
+          border: 1px solid gray;
+
+          padding: 10px;
+
+          margin-left: 50px;
+
+          padding-left: 50px;  
+
+          height: 80px;
+
+          overflow: auto;  
+
+       }
+
+    </style>
+
+</head>
+
+<body>
+
+   <ol>
+
+      <li>Item-1</li>
+
+      <li>Item-2</li>
+
+      <li>Item-3</li>
+
+      <li>Item-4</li>
+
+      <li>Item-5</li>
+
+      <li>Item-6</li>
+
+      <li>Item-7</li>
+
+      <li>Item-8</li>
+
+      <li>Item-9</li>
+
+      <li>Item-10</li>
+
+
+
+   </ol>
+
+</body>
+
+</html>
+
+
+
+
+
+   4. How to remove numbering for list?
+
+   A. By using CSS “list-style” attribute set to “none”.
+
+
+
+Syntax:
+
+       ol {
+
+            list-style: none;
+
+       }
+
+
+
+Ex: List in Footer
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+       footer {
+
+        display: grid;
+
+        grid-template-columns: 3fr 3fr 3fr 3fr;
+
+        padding: 20px;
+
+       }
+
+       ol {
+
+          list-style: none;
+
+       }
+
+       li {
+
+        margin-bottom: 10px;
+
+        font-family: Arial;
+
+       }
+
+    </style>
+
+</head>
+
+<body>
+
+   <footer>
+
+       <div>
+
+        <ol>
+
+            <li>Contact Us</li>
+
+            <li>FAQs</li>
+
+            <li>Size Guide</li>
+
+            <li>Shipping & Returns</li>
+
+        </ol>
+
+       </div>
+
+       <div>
+
+        <ol>
+
+            <li>Contact Us</li>
+
+            <li>FAQs</li>
+
+            <li>Size Guide</li>
+
+            <li>Shipping & Returns</li>
+
+        </ol>
+
+       </div>
+
+       <div>
+
+        <ol>
+
+            <li>Contact Us</li>
+
+            <li>FAQs</li>
+
+            <li>Size Guide</li>
+
+            <li>Shipping & Returns</li>
+
+        </ol>
+
+       </div>
+
+       <div>
+
+        <ol>
+
+            <li>Contact Us</li>
+
+            <li>FAQs</li>
+
+            <li>Size Guide</li>
+
+            <li>Shipping & Returns</li>
+
+        </ol>
+
+       </div>
+
+   </footer>
+
+</body>
+
+</html>
+
+
+
+Ex: List in navbar
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+        nav {
+
+            padding: 20px;
+
+            font-family: Arial;
+
+            display: flex;
+
+            flex-direction: row;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+        }
+
+        ol {
+
+            display: flex;
+
+            list-style: none;
+
+        }
+
+        li {
+
+            margin-right: 20px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+   <nav>
+
+      <div><span>Shopper.</span></div>
+
+      <ol>
+
+         <li>Home</li>
+
+         <li>Shop</li>
+
+         <li>Pages</li>
+
+         <li>Blog</li>
+
+         <li>Docs</li>
+
+         <li>Contact</li>
+
+      </ol>
+
+      <div>
+
+        <ol>
+
+             <li class="bi bi-person"></li>
+
+             <li class="bi bi-cart4"></li>
+
+        </ol>
+
+      </div>
+
+   </nav>
+
+</body>
+
+</html>
+
+
+
+Ex: List in navbar vertical
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+        nav {
+
+            padding: 20px;
+
+            font-family: Arial;
+
+        }
+
+        ol {
+
+            list-style: none;
+
+            margin-left: -40px;
+
+        }
+
+        li {
+
+            width: 100px;
+
+            text-align: center;
+
+            background-color: lightgray;
+
+            padding: 5px;
+
+            margin-bottom: 20px;
+
+            border-radius: 5px;
+
+        }
+
+        li:hover {
+
+            background-color: black;
+
+            color:white;
+
+            cursor: grab;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+   <nav>
+
+      <div><span>Shopper.</span></div>
+
+      <ol>
+
+         <li>Home</li>
+
+         <li>Shop</li>
+
+         <li>Pages</li>
+
+         <li>Blog</li>
+
+         <li>Docs</li>
+
+         <li>Contact</li>
+
+      </ol>
+
+   </nav>
+
+</body>
+
+</html>
+
+
+
+   5. How to design “breadcrumb”? 
+
+   A. By using CSS classes 
+
+           a) ::before
+
+           b) ::after
+
+       They allow to set a symbol before or after. 
+
+
+
+CSS Child Selectors:
+
+
+
+       :first-child            
+
+       :last-child
+
+       :nth-child(n)            // n refers to level number
+
+
+
+Syntax:
+
+       li : nth-child(2) { }
+
+       li : nth-child(even | odd) { }
+
+
+
+Ex:
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+       ol {
+
+         list-style: none;
+
+         display: flex;
+
+       }
+
+       li::before {
+
+          content: " > ";
+
+          padding-left: 10px;
+
+          padding-right: 10px;
+
+          color:gray;
+
+          font-size: 14px;
+
+       }
+
+       li:first-child::before {
+
+          content: "";
+
+       }
+
+       li:nth-child(odd) {
+
+          color:blue;
+
+       }
+
+    </style>
+
+</head>
+
+<body>
+
+   <ol>
+
+      <li> Home </li>
+
+      <li> Electronics </li>
+
+      <li> Mobiles & Accessories </li>
+
+      <li> Mobiles </li>
+
+      <li> Apple Mobiles </li>
+
+      <li> iPhone </li>
+
+   </ol>
+
+</body>
+
+</html>
+
+
+
+Unordered List:
+
+   - It sets bullet symbol for items in a list.
+
+   
+
+   <ul>            unordered list
+
+   <li>            list item
+
+
+
+Syntax:
+
+       <ul>
+
+         <li> Item-1 </li>
+
+         <li> Item-2 </li>
+
+       </ul>
+
+
+
+   - You can set “type” as “circle, disc & square”.
+
+
+
+       <ul type=“circle | disc | square”>
+
+
+
+  FAQ: How to set custom image as bullet ?
+
+  Ans: By using  “list-style-image” attribute set with “url()”.
+
+
+
+
+
+Syntax:
+
+       {
+
+         list-style-image: url(“./images/pic.jpg”);
+
+       }
+
+
+
+
+
+
+
+Ex: Bootstrap icons for list item
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+        ul {
+
+            list-style: none;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <ul type="square">
+
+        <li class="bi bi-star-fill">Item-1</li>
+
+        <li class="bi bi-star-fill">Item-2</li>
+
+        <li class="bi bi-star-fill">Item-3</li>
+
+    </ul>
+
+</body>
+
+</html>
+
+
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+        ul {
+
+            list-style-image: url("./images/bullet.jpg");
+
+            font-size: 30px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <ul>
+
+        <li>Item-1</li>
+
+        <li>Item-2</li>
+
+        <li>Item-3</li>
+
+    </ul>
+
+</body>
+
+</html>

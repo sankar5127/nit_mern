@@ -1,0 +1,654 @@
+Summary
+
+- CSS Integration 
+
+- CSS Selectors
+
+- CSS Rules
+
+- CSS Inheritance 
+
+- CSS Colors 
+
+- CSS Units
+
+
+
+CSS Units
+
+   - CSS units are for measuring dimensions and positions. 
+
+   - Units are categorized into 2 groups
+
+           1. Relative Units
+
+           2. Absolute Units
+
+   - Absolute units are independent and have a fixed size or position, they are not effected by
+
+     parent or adjacent elements. 
+
+   - All units are converted into pixels. 
+
+   - Browser supports following absolute units. 
+
+
+
+
+
+
+Unit
+
+
+
+
+Name
+
+
+
+
+Equivalent to
+
+
+
+
+
+
+cm 
+
+
+
+
+Centimeters
+
+
+
+
+1cm = 96px/2.54
+
+
+
+
+
+
+mm 
+
+
+
+
+Millimeters
+
+
+
+
+1mm = 1/10th of 1cm
+
+
+
+
+
+
+Q
+
+
+
+
+Quarter-millimeters
+
+
+
+
+1Q = 1/40th of 1cm
+
+
+
+
+
+
+in
+
+
+
+
+Inches
+
+
+
+
+1in = 2.54cm = 96px 
+
+
+
+
+
+
+pc 
+
+
+
+
+Picas
+
+
+
+
+1pc = 1/6th of 1in
+
+
+
+
+
+
+pt 
+
+
+
+
+Points
+
+
+
+
+1pt = 1/72th of 1in
+
+
+
+
+
+
+px 
+
+
+
+
+Pixels
+
+
+
+
+1px = 1/96th of 1in
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Syntax:
+
+        {
+
+           width: 2Q;
+
+           height: 4in;
+
+           margin-left: 50pt;
+
+           margin-top: 50mm;
+
+       }
+
+
+
+   - Relative units depend on parent or adjacent elements.
+
+   - CSS relative units are 
+
+
+
+               a) em            element size
+
+               b) rem            root element size
+
+               c) vh                view port height
+
+               d) vw                view port width 
+
+               e) %                percent 
+
+
+
+   - “em” & “rem” are used to control font size and can be used only for text.
+
+   - If you are applying “em” & “rem” for any other context, then it uses the same font size of 
+
+     parent and its root.
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Document</title>
+
+   <style>
+
+      .container {
+
+         font-size: 60px;
+
+      }
+
+      .container p {
+
+         font-size: 0.5em;
+
+      }
+
+      .container div {
+
+         font-size: 1.5em;
+
+         border:1px solid black;
+
+         padding: 5px;
+
+         width: 1em; 
+
+      }
+
+      .container span {
+
+         font-size: 1.5rem;
+
+      }
+
+   </style>
+
+</head>
+
+<body>
+
+   Body Text
+
+   <div class="container">
+
+        Container Text 
+
+        <div>Container Div</div>
+
+        <p>Container Paragraph</p>
+
+        <span>Container Span</span>
+
+   </div>
+
+</body>
+
+</html>
+
+
+
+   - “vw” & “vh” are relative to view port.
+
+   - View Port refers to active screen size of device. [w-width, h-height]
+
+   - It is not relative to parent, it is relative to screen. 
+
+
+
+Syntax:
+
+           img {
+
+               width: 100vw;
+
+               height: 100vh;
+
+           }
+
+
+
+   - 100 refers to 100% for screen width and height.
+
+   - The units in “%” are not relative to screen, they are relative to parent element.
+
+   - If parent is not defined the they are relative to browser width & height. 
+
+
+
+Syntax:
+
+           img {
+
+               width: 100%;
+
+           }
+
+
+
+FAQ: How to configure fluid images?
+
+Ans:  By using relative units. [%, vh, vw]
+
+
+
+CSS Attributes
+
+
+
+1. Box Model Attributes
+
+       
+
+       a) Margin
+
+       b) Padding
+
+       c) Width
+
+       d) Height
+
+       e) Border
+
+       f) Border Radius
+
+       g) Box Shadow
+
+
+
+       Margin Attributes:
+
+               margin                It is short hand for all directions, It uses the orientation with
+
+                                       top, right, bottom and left. 
+
+
+
+                                       {
+
+                                         margin: top right bottom left;
+
+                                       }
+
+                               
+
+                                       {
+
+                                         margin: 50px 20px 50px 20px;
+
+                                       }
+
+
+
+               margin-left
+
+               margin-right
+
+               margin-top
+
+               margin-bottom
+
+
+
+       Padding Attributes
+
+
+
+               padding                short hand for all directions
+
+               padding-left
+
+               padding-top    
+
+               padding-bottom
+
+               padding-right
+
+               
+
+       Border Attributes
+
+
+
+               border                short hand for all direction and all styles
+
+                                       [style includes size, color and border format]
+
+               border-width
+
+               border-color
+
+               border-style        [dotted, solid, double, dashed, groove ..]
+
+               
+
+               border-left            left short hand for width, style & color
+
+               border-left-width
+
+               border-left-color
+
+               border-left-style
+
+
+
+               … same for other directions …
+
+
+
+               border-radius        
+
+               border-top-left-radius
+
+               border-top-right-radius
+
+               border-bottom-left-radius
+
+               border-bottom-right-radius 
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Document</title>
+
+   <style>
+
+      p {
+
+         text-align: justify;
+
+         margin: 40px 60px 20px;
+
+         padding: 30px;
+
+         border-left: 10px double red;
+
+         border-top: 10px solid blue;
+
+         border-bottom: 10px double red;
+
+         border-right: 10px solid blue;
+
+         border-top-left-radius: 100px;
+
+         border-bottom-right-radius: 100px;
+
+      }
+
+      img {
+
+         width: 200px;
+
+         height: 200px;
+
+         border-radius:100%;
+
+      }
+
+   </style>
+
+</head>
+
+<body>
+
+   <img src="./images/women-fashion.jpg">
+
+   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis dignissimos aliquid, veritatis quos omnis soluta labore quibusdam repudiandae velit obcaecati accusamus perspiciatis consectetur, at suscipit beatae odit esse! Quisquam, dolor? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic ad consectetur, dolorem, maxime molestias rerum ab maiores deleniti iure, modi harum impedit aliquid delectus omnis nostrum nulla neque autem numquam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt consequatur incidunt id quasi adipisci est officia autem! Atque sint perspiciatis at a amet omnis eum aut magnam exercitationem, ad commodi.</p>
+
+</body>
+
+</html>
+
+
+
+   Note: To set a circle you have to configure border radius same as width and height.
+
+               [ width = height = radius => circle ]
+
+
+
+               border-image                : It requires “url()” style and offset. 
+
+                           
+
+                                               {
+
+                                               border-image: url(“path”) stretch | space  100;
+
+                                               }
+
+                                       
+
+   Note: To set border image you have to configure border.            
+
+               {
+
+                   border :10px solid transparent;
+
+                   border-image: url(“path”) stretch 80;
+
+               }
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Document</title>
+
+   <style>
+
+      p {
+
+         text-align: justify;
+
+         margin: 40px 60px 20px;
+
+         padding: 30px;
+
+         border: 20px solid transparent;
+
+         border-image: url("./images/border.gif") space 80;
+
+      }
+
+      
+
+   </style>
+
+</head>
+
+<body>
+
+   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis dignissimos aliquid, veritatis quos omnis soluta labore quibusdam repudiandae velit obcaecati accusamus perspiciatis consectetur, at suscipit beatae odit esse! Quisquam, dolor? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic ad consectetur, dolorem, maxime molestias rerum ab maiores deleniti iure, modi harum impedit aliquid delectus omnis nostrum nulla neque autem numquam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt consequatur incidunt id quasi adipisci est officia autem! Atque sint perspiciatis at a amet omnis eum aut magnam exercitationem, ad commodi.</p>
+
+</body>
+
+</html>
+
+
+
+               box-shadow            : shadow with  horizontal, vertical, color and blur value.
+
+
+
+Syntax:
+
+       {
+
+           box-shadow : 20px 30px 2px red;
+
+       }
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Document</title>
+
+   <style>
+
+      p {
+
+         text-align: justify;
+
+         margin: 40px 60px 20px;
+
+         padding: 30px;
+
+         border:10px solid gray;
+
+         box-shadow: 10px 10px 10px rgb(217, 143, 143);
+
+      }
+
+      
+
+   </style>
+
+</head>
+
+<body>
+
+   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis dignissimos aliquid, veritatis quos omnis soluta labore quibusdam repudiandae velit obcaecati accusamus perspiciatis consectetur, at suscipit beatae odit esse! Quisquam, dolor? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic ad consectetur, dolorem, maxime molestias rerum ab maiores deleniti iure, modi harum impedit aliquid delectus omnis nostrum nulla neque autem numquam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt consequatur incidunt id quasi adipisci est officia autem! Atque sint perspiciatis at a amet omnis eum aut magnam exercitationem, ad commodi.</p>
+
+</body>
+
+</html>

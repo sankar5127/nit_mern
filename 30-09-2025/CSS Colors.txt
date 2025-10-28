@@ -1,0 +1,573 @@
+CSS Selectors
+
+1. Primary Selectors
+
+       - Type
+
+       - ID
+
+       - Class
+
+2. Relational Selectors
+
+3. Structural Pseudo Classes 
+
+4. Element State Classes 
+
+5. Validation State Classes 
+
+
+
+6. Attribute Selectors
+
+       - You can select elements by using their attribute & value.
+
+       - Several HTML elements are defined by using same token [tag] name. However they 
+
+         change by using attribute.
+
+
+
+Syntax:
+
+         selector[attribute] { }             selects all elements defined with specified attribute. 
+
+         selector[attribute=“value”]  selects elements by attribute matching with specified value.
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Document</title>
+
+   <style>
+
+      input[type="button"] {
+
+         background-color: yellow;
+
+      }
+
+      img[src]{
+
+         display: inline;
+
+      }
+
+      img {
+
+         display: none;
+
+      }
+
+   </style>
+
+</head>
+
+<body>
+
+   <img src="./images/women-fashion.jpg" width="100" height="100" border="2">
+
+   <img  width="100" height="100" border="2">
+
+    <dl>
+
+      <dt>User Name</dt>
+
+      <dd><input type="text"></dd>
+
+      <dt>Mobile</dt>
+
+      <dd><input type="text"></dd>
+
+    </dl>
+
+    <input type="button" value="Submit">
+
+    <input type="button" value="Reset">
+
+</body>
+
+</html>
+
+
+
+   Attribute Conditions:
+
+
+
+               [attribute=value]                exact match
+
+               [attribute^=value]            starts with                [attribute$=value]            ends with
+
+               [attribute|=value]            must start with and can be separate using “-“ delimiter.
+
+               [attribute~=value]            can start or end with by using space delimiter.
+
+                                                    can be at any occurrence but with space delimiter.
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Document</title>
+
+   <style>
+
+      p[class~="Effects"]{
+
+         color:red;
+
+         background-color: yellow;
+
+      }
+
+   </style>
+
+</head>
+
+<body>
+
+   <p class="Effects">Para-1</p>
+
+   <p class="ParaEffects">Para-2</p>
+
+   <p class="EffectsPara">Para-3</p>
+
+   <p class="TextEffectsPara">Para-4</p>
+
+   <p class="Effects Para">Para-5</p>
+
+   <p class="Para Effects">Para-6</p>
+
+   <p class="Effects Text Para">Para-7</p>
+
+   <p class="Effects-Text">Para-8</p>
+
+   <p class="Text Effects">Para-9</p>
+
+</body>
+
+</html>
+
+
+
+7. Universal Selector
+
+               
+
+           * {                selects all element in page.
+
+
+
+           }
+
+
+
+8. Root Selector
+
+   
+
+         :root {            selects the shadow DOM
+
+
+
+         }
+
+
+
+9. Language Selector                    
+
+         :lang(“en-in”)
+
+          {
+
+          }
+
+
+
+10. Dynamic Pseudo Classes 
+
+
+
+       ::first-letter 
+
+       ::placeholder
+
+       ::first-line
+
+       ::before
+
+       ::after
+
+       ::selection
+
+   
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Document</title>
+
+   <style>
+
+      p {
+
+         text-align: justify;
+
+      }
+
+      p::first-letter {
+
+         font-size: 50px;
+
+         font-weight: bold;   
+
+         color:red;
+
+         float: left;
+
+         line-height: 30px;
+
+      }
+
+      p::first-line {
+
+         color:red;
+
+      }
+
+      input::placeholder {
+
+         font-size: 10px;
+
+         font-weight: bold;
+
+         text-decoration: underline 1px solid;
+
+         background-color: yellow;
+
+      }
+
+      ol {
+
+         list-style: none;
+
+         font-family: Arial;
+
+         display: flex;
+
+         font-size: 14px;
+
+      }
+
+      li::after {
+
+         content: " > ";
+
+         padding-left: 5px;
+
+         padding-right: 5px;
+
+         font-size: 12px;
+
+         color:gray;
+
+      }
+
+      li:last-child::after {
+
+         content: "";
+
+      }
+
+      p::selection {
+
+         background-color: yellow;
+
+         color:red;
+
+         text-decoration: underline 1px solid;
+
+      }
+
+   </style>
+
+</head>
+
+<body>
+
+   <nav>
+
+      <ol>
+
+         <li>Home</li>
+
+         <li>Mobiles & Accessories</li>
+
+         <li>Mobiles</li>
+
+         <li>Apple</li>
+
+         <li>Apple Mobiles</li>
+
+      </ol>
+
+   </nav>
+
+   <input type="password" placeholder="At lest one uppercase letter">
+
+   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero suscipit obcaecati, amet ducimus et officiis. Ad saepe iure praesentium quaerat at exercitationem, officia dignissimos amet ducimus, porro, voluptatibus quod perspiciatis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus neque voluptas itaque harum repudiandae, culpa necessitatibus minus beatae dolore laudantium quas dolorem repellat praesentium illum exercitationem nesciunt sed pariatur non. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ea fugiat autem quas magni atque, sed veritatis temporibus iure magnam ab alias dicta, voluptates dolorum. Nam repellat facilis aut error. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae sequi iste illo, magnam molestias ab modi! Repellendus praesentium nobis similique neque fuga aliquid quis consectetur dolor iure reprehenderit! Libero, officiis. </p>
+
+</body>
+
+</html>
+
+
+
+Summary
+
+- CSS Integration
+
+- CSS Selectors
+
+- CSS Rules
+
+
+
+CSS Inheritance:
+
+       - The child elements inherit the properties of parent.
+
+       - However all parent properties are not inherited.
+
+       - You can control the inheritance by using following values for child element.
+
+           a) inherit
+
+           b) initial
+
+           c) unset
+
+   
+
+       - “inherit” gets parent effects.
+
+       - “initial” removes the parent effects.
+
+       - “unset” removes the default effects. [if it not inherited from parent]
+
+
+
+   Syntax:
+
+           {
+
+              all : inherit | initial | unset;
+
+           }
+
+
+
+           {
+
+              attribute1: unset;
+
+              attribute2: initial;
+
+              attribute3: inherit;
+
+           }
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Document</title>
+
+   <style>
+
+      .container {
+
+          border: 4px double red;
+
+          padding: 20px;
+
+          color:red;
+
+      }
+
+      h2 {
+
+         border:inherit;
+
+         padding: inherit;
+
+         color:initial;
+
+      }
+
+      h1 {
+
+         font-weight: unset;
+
+         font-size: unset;
+
+      }
+
+      h3 {
+
+         all:inherit;
+
+      }
+
+   </style>
+
+</head>
+
+<body>
+
+   <h1>Web Technologies</h1>
+
+   <div class="container">
+
+       container text 
+
+       <h2>Welcome to HTML</h2>
+
+       <h3>Normal Elements</h3>
+
+   </div>
+
+</body>
+
+</html>
+
+
+
+CSS Colors
+
+
+
+   1. Color Name
+
+   
+
+               {  color : yellow }
+
+
+
+   2. Color Shade Name
+
+
+
+               { color: lightyellow }
+
+
+
+   3. Hexadecimal 
+
+               #RGB                0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f
+
+               #RRGGBB        0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f
+
+
+
+               { color :  #f00 }        red
+
+               { color : #ff0000 }    red
+
+
+
+   4.  RGB()
+
+
+
+             rgb(redValue, greenValue, blueValue)  =>  color value can be to 0 to 255
+
+
+
+Ex:    
+
+            color: rgb(255, 0, 0);
+
+
+
+   5.  RGBA()
+
+
+
+            rgba(red, green, blue, alpha)     => alpha is transparent 0 to 1.
+
+
+
+Ex:
+
+           color: rgba(255, 0, 0, 0.5);
+
+
+
+   6.   HSL()
+
+           - Hue                0 to 360deg [0 to 120 = Red, 121 to 240 = Green, 241 to 360 = Blue]
+
+           - Saturation        0 to 100% gray  [ 100% = remove complete gray ]
+
+           - Lightness        0 to 100% 
+
+
+
+   Ex:    
+
+           { 
+
+             color: hsl( 10deg, 50%, 60% )
+
+           }
+
+   
+
+   7.  HSLA()
+
+           - A is alpha
+
+
+
+       Ex: 
+
+               color : hsla(10deg, 50%, 40%, 0.6);

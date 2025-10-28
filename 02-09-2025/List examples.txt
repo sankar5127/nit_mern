@@ -1,0 +1,577 @@
+Ex: Flipkart Product
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+        .row {
+
+            display: grid;
+
+            grid-template-columns: 3fr 9fr;
+
+        }
+
+        .nav {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding-right: 20px;
+
+            font-family: Arial;
+
+            margin-left: -40px;
+
+        }
+
+        .breadcrumb {
+
+            list-style: none;
+
+            display: flex;
+
+            color:gray;
+
+            align-items: center;
+
+        }
+
+        .breadcrumb li::after {
+
+            content: " > ";
+
+            padding-left: 10px;
+
+            padding-right: 10px;
+
+        }
+
+        .nav-item {
+
+            display: inline-block;
+
+            width: 105px;
+
+            white-space: nowrap;
+
+            overflow: hidden;
+
+            text-overflow: ellipsis;
+
+        }
+
+        .product-details {
+
+            font-family: Arial;
+
+        }
+
+        .product-title {
+
+            font-size: 25px;
+
+            padding-bottom: 10px;
+
+        }
+
+        .badge {
+
+            background-color: green;
+
+            color:white;
+
+            padding: 5px;
+
+            border-radius: 5px;
+
+        }
+
+        .ratings {
+
+            margin-left: 10px;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            color:gray;
+
+        }
+
+        .extra-off {
+
+            margin-top: 20px;
+
+            font-weight: bold;
+
+            margin-bottom: 20px;
+
+            color:green;
+
+        }
+
+        .price {
+
+            font-size: 40px;
+
+            font-weight: bold;
+
+        }
+
+        .actual-price {
+
+            font-size: 22px;
+
+            color:gray;
+
+        }
+
+        .offers {
+
+            list-style: none;
+
+            margin-left: -40px;
+
+        }
+
+        .offers li {
+
+            color:green;
+
+            margin-bottom: 20px;
+
+        }
+
+        li span {
+
+            color:black;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="row">
+
+        <div class="col-3">
+
+
+
+        </div>
+
+        <div class="col-9">
+
+            <div class="nav">
+
+                <div class="breadcrumb-area">
+
+                   <ul class="breadcrumb">
+
+                     <li> Home </li>
+
+                     <li> <div class="nav-item">Mobiles & Accessories</div> </li>
+
+                     <li> Mobiles </li>
+
+                     <li> Apple Mobiles </li>
+
+                     <li> iPhone </li>
+
+                   </ul>
+
+                </div>
+
+                <div>
+
+                    <span class="bi bi-square"> Compare </span>
+
+                    <span class="bi bi-reply"> Share </span>
+
+                </div>
+
+            </div>
+
+            <div class="product-details">
+
+                <div class="product-title"> Apple iPhone 16 (White, 128 GB) </div>
+
+                <div>
+
+                    <span class="badge"> 4.6 <span class="bi bi-star-fill"></span> </span>
+
+                    <span class="ratings"> 19,106 ratings & 793 reviews  </span>
+
+                </div>
+
+                <div class="extra-off">
+
+                    Extra &#8377;5000 off
+
+                </div>
+
+                <div>
+
+                    <span class="price">&#8377; 74,900 </span>
+
+                    <span class="actual-price"> <strike>&#8377; 79,900</strike> </span>
+
+                </div>
+
+                <div>
+
+                    <h4>Available Offers</h4>
+
+                    <ul class="offers">
+
+                        <li class="bi bi-tag-fill"> <span><b>Bank Offer5%</b> cashback on Flipkart Axis Bank Credit Card upto ₹4,000 per statement quarterT&C</span> </li>
+
+                        <li class="bi bi-tag-fill"> <span><b>Bank Offer5%</b> cashback on Flipkart Axis Bank Credit Card upto ₹4,000 per statement quarterT&C</span> </li>
+
+                        <li class="bi bi-tag-fill"> <span><b>Bank Offer5%</b> cashback on Flipkart Axis Bank Credit Card upto ₹4,000 per statement quarterT&C</span> </li>
+
+                        <li class="bi bi-tag-fill"> <span><b>Bank Offer5%</b>cashback on Flipkart Axis Bank Credit Card upto ₹4,000 per statement quarterT&C</span> </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+     <style>
+
+         header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            padding: 20px;
+
+            font-family: Arial;
+
+            background-color: rgb(226, 225, 225);
+
+         }
+
+         section {
+
+            padding: 20px;
+
+            height: 570px;
+
+            display: grid;
+
+            grid-template-columns: 6fr 6fr;
+
+            grid-gap: 20px;
+
+            background-color: rgb(229, 229, 229);
+
+            margin-top: 10px;
+
+         }
+
+         .panel-left, .panel-right {
+
+            background-color: white;
+
+            border-radius: 20px;
+
+            padding: 10px;
+
+            font-family: Arial;
+
+         }
+
+         .left-header, .right-header {
+
+            background-color: rgb(241, 239, 239);
+
+            height: 40px;
+
+            
+
+         }
+
+         .content {
+
+            height: 550px;
+
+            overflow: auto;
+
+         }
+
+         .code-lines li {
+
+            margin-top: 10px;
+
+            margin-bottom: 10px;
+
+            color: rgb(95, 95, 203);
+
+         }
+
+         .row {
+
+            display: grid;
+
+            grid-template-columns: 1fr 11fr;
+
+         }
+
+     </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div>
+
+            <span class="bi bi-javascript"></span>
+
+            <span> 30 Days of JavaScript </span>
+
+        </div>
+
+        <div>
+
+            <span class="bi bi-bug"></span>
+
+            <span class="bi bi-play-btn"></span>
+
+            <span class="bi bi-cloud-arrow-up"> Submit </span>
+
+        </div>
+
+        <div>
+
+            <span class="bi bi-layout-three-columns"></span>
+
+            <span class="bi bi-gear"></span>
+
+        </div>
+
+    </header>
+
+    <section>
+
+        <div class="panel-left">
+
+            <div class="left-header"></div>
+
+            <div class="content">
+
+                <h2>2667. Create Hello World Function</h2>
+
+            <div>
+
+                
+
+                <samp>Write a function createHelloWorld. It should return a new function that always returns "Hello World".</samp>
+
+
+
+                <pre>
+
+                    Example 1:
+
+
+
+                    Input: args = []
+
+                    Output: "Hello World"
+
+                    Explanation:
+
+                    const f = createHelloWorld();
+
+                    f(); // "Hello World"
+
+                </pre>
+
+
+
+                The function returned by createHelloWorld should always return "Hello World".
+
+                <pre>
+
+                Example 2:
+
+
+
+                Input: args = [{},null,42]
+
+                Output: "Hello World"
+
+                Explanation:
+
+                const f = createHelloWorld();
+
+                f({}, null, 42); // "Hello World"
+
+
+
+                </pre>
+
+                <pre>
+
+                    Example 1:
+
+
+
+                    Input: args = []
+
+                    Output: "Hello World"
+
+                    Explanation:
+
+                    const f = createHelloWorld();
+
+                    f(); // "Hello World"
+
+                </pre>
+
+
+
+                The function returned by createHelloWorld should always return "Hello World".
+
+                <pre>
+
+                Example 2:
+
+
+
+                Input: args = [{},null,42]
+
+                Output: "Hello World"
+
+                Explanation:
+
+                const f = createHelloWorld();
+
+                f({}, null, 42); // "Hello World"
+
+
+
+                </pre>
+
+                Any arguments could be passed to the function but it should still always return "Hello World".
+
+                <pre>
+
+                    Accepted
+
+                    742,977/905.7K
+
+                    Acceptance Rate
+
+                    82.0%
+
+                </pre>
+
+            </div>
+
+            </div>
+
+        </div>
+
+        <div class="panel-right">
+
+            <div class="right-header"></div>
+
+            <div class="row">
+
+                <div class="col-1">
+
+                    <ol class="code-lines">
+
+                        <li></li>
+
+                        <li></li>
+
+                        <li></li>
+
+                        <li></li>
+
+                        <li></li>
+
+                        <li></li>
+
+                        <li></li>
+
+                        <li></li>
+
+                        <li></li>
+
+                        <li></li>
+
+                    </ol>
+
+                </div>
+
+                <div class="col-11">
+
+                    <br>
+
+                    <var>var x </var>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

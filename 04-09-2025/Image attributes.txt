@@ -1,0 +1,221 @@
+Embedding Image into Page:
+
+   - You can embed image by using <img> element.
+
+   - If you want image SEO friendly then keep inside <figure> container with <figcaption>.
+
+
+
+Syntax:
+
+       <figure>
+
+           …
+
+           <img>
+
+           …
+
+           <figcaption> Keyword </figcaption>
+
+
+
+       </figure>
+
+
+
+Image Attributes:
+
+
+
+       1. src                : It refers to image path and file name.
+
+       2. width & height: Sets width and height for image in pixels or in %.
+
+                                  You can define fluid images with “%” as unit.
+
+Syntax:
+
+       <img src=“path”  width=“200” height=“200”>     // absolute size
+
+       <img src=“path”  width=“100%” height=“100%”>  // relative size
+
+       
+
+       3. alt                    : It defines the alternative text to display when image fails to load.
+
+       
+
+Note: You can disable images from browser settings “ edge://settings “
+
+
+
+Syntax:
+
+       <img  src=“path”  width=“100” height=“100” alt=“enable images on browser”>
+
+
+
+       4. title                : It is used to display the title as screen tip when mouse is over the 
+
+                                 image. 
+
+Syntax:
+
+       <img src=“path”  title=“tool-tip”>
+
+
+
+       5. border            : It sets border for image by specified pixels. 
+
+
+
+Syntax:
+
+       <img src=“path”  border=“2”>
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        figure {
+
+            width: 150px;
+
+            height: 250px;
+
+            border: 2px solid black;
+
+            padding: 10px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <figure>
+
+        <img src="./images/women-fashion.jpg" border="3" title="30% OFF on women fashion" alt="please enable images on your browser" width="100%" height="200">
+
+        <figcaption>Women Fashion</figcaption>
+
+    </figure>
+
+</body>
+
+</html>
+
+
+
+
+
+       6. align                : It is used to align image left or right with text wrapping.     
+
+       7. hspace            : It sets horizontal space between image and text.
+
+   
+
+       8. vspace         : It sets vertical space between image and text.
+
+
+
+Syntax:
+
+       <img src=“path”  align=“left” hspace=“20” vspace=“20”> 
+
+
+
+Advanced Attributes        
+
+           
+
+       9. crossorign            : It is used to configure CORS [ Cross Origin Resource Sharing ].
+
+                                     It allows to restrict the accessibility of image in page.
+
+                                     You can provide an authorized access to image.
+
+                                     It provides the options
+
+                                       a) use-credentials 
+
+                                       b) allow-anonymous 
+
+ Syntax:
+
+           <img  src=“remote_path”  crossorigin=“use-credentials | anonymous”>
+
+
+
+           api.nasa.gov => browse api => mars rover photos => copy img_src
+
+
+
+       10. decoding            : It allows to load image by using 2 decoding techniques
+
+                                       a) async  : It allows to load with other content in background. 
+
+                                       b) sync    : It blocks other content while loading. 
+
+
+
+Syntax:
+
+           <img src=“path”  decoding=“sync | async | auto”>
+
+
+
+       11. loading            : It defines a loading technique, which can be 
+
+                                       a) lazy      : It loads only when required.
+
+                                       b) eager   : It loads according to the document flow.
+
+Syntax:
+
+           <img src=“path”  loading=“lazy | eager”>
+
+
+
+       12. Importance        : It is used to set priority for image in page. 
+
+                                       a) low
+
+                                       b) high
+
+                                       c) auto
+
+
+
+Syntax:
+
+           <img src=“path”  importance=“low | high | auto”>
+
+
+
+       13. srcset                : It defines a collection of images for image element. 
+
+                                     You can rotate images according to state and situation. 
+
+
+
+Syntax:
+
+           <img srcset=“collection_of_image”>

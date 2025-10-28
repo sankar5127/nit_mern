@@ -1,0 +1,635 @@
+CSS Units 
+
+   - Absolute
+
+   - Relative
+
+CSS Box Model
+
+   - Margin
+
+   - Padding
+
+   - Border
+
+   - Border Radius
+
+   - Width
+
+   - Height
+
+   - Box Shadow
+
+
+
+CSS Positions:
+
+   
+
+1. Static
+
+2. Absolute
+
+3. Fixed
+
+4. Relative
+
+5. Sticky 
+
+
+
+Static Position
+
+   - It is the default position for element.
+
+   - It keeps element according to the normal flow of document.
+
+   - It can’t move by using left, right, top or bottom attributes. 
+
+
+
+Absolute Position 
+
+   - It removes element from normal flow of document. 
+
+   - It allows to move element using left, right, top and bottom attributes.
+
+   - It keeps the element with regard to content in page.
+
+   
+
+Fixed Position
+
+   - It removes element from normal flow of document.
+
+   - It allows to move element using left, right, top and bottom attributes.
+
+     - It keeps the element with regard to browser window, not content in page.
+
+
+
+Sticky Position
+
+   - It keeps element according to normal flow of document.
+
+   - It will not allow to move element using left, right, top and bottom attributes. 
+
+   - You can stick at specific position using top, left, right and bottom.
+
+
+
+Relative Position
+
+   - It is the position defined for parent element.
+
+   - It can keep the child elements position with regard to parent.
+
+   - You have to make sure that child element position is always “absolute”.
+
+
+
+
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Document</title>
+
+   <style>
+
+      div {
+
+         text-align: justify;
+
+         border:1px solid red;
+
+         padding: 5px;
+
+      }  
+
+      .offer {
+
+         width: 100px;
+
+         background-color: red;
+
+         color:yellow;
+
+         font-size: 20px;
+
+         position: fixed;
+
+         right: 10px;
+
+         top: 50px;
+
+      }
+
+      h1 {
+
+         background-color: black;
+
+         color:white;
+
+         padding: 5px;
+
+         position: sticky;
+
+         top: 0px;
+
+      }
+
+   </style>
+
+</head>
+
+<body>
+
+   <div>
+
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptatibus architecto dolore at distinctio soluta error accusamus quisquam consequuntur reiciendis. Illo excepturi maxime culpa vitae reiciendis perspiciatis ducimus rem dicta.
+
+      <h1>CSS Positions</h1>
+
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quas dolor dolores, id incidunt fugit inventore animi quod commodi voluptatibus iusto perspiciatis? Mollitia facere voluptate necessitatibus aliquid laboriosam aperiam optio!
+
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quas dolor dolores, id incidunt fugit inventore animi quod commodi voluptatibus iusto perspiciatis? Mollitia facere voluptate necessitatibus aliquid laboriosam aperiam optio!
+
+      <div class="offer">30% Off</div>
+
+   </div>
+
+</body>
+
+</html>
+
+
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Document</title>
+
+   <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+   <style>
+
+      .women-fashion {
+
+         background-image: url("./images/women-fashion.jpg");
+
+         background-size: cover;
+
+         width: 400px;
+
+         height: 400px;
+
+         position: relative;
+
+      }
+
+      .offer {
+
+         width: 50px;
+
+         height: 50px;
+
+         border-radius: 50px;
+
+         background-color: red;
+
+         color:white;
+
+         text-align: center;
+
+         padding: 5px;
+
+         font-size: 20px;
+
+         position: absolute;
+
+         right: 10px;
+
+         top: 20px;
+
+      }
+
+      button {
+
+         padding: 10px;
+
+         font-size: 20px;
+
+         position: relative;
+
+         background-color: yellow;
+
+         border:1px solid goldenrod;
+
+      }
+
+      .count {
+
+         display: inline-block;
+
+         width: 20px;
+
+         height: 20px;
+
+         border-radius: 20px;
+
+         background-color: red;
+
+         color:white;
+
+         font-size: 14px;
+
+         text-align: center;
+
+         padding: 2px;
+
+         position: absolute;
+
+         top: -5px;
+
+         right: -10px;
+
+      }
+
+   </style>
+
+</head>
+
+<body>
+
+   <button>
+
+      <span class="bi bi-cart4"></span>
+
+      <span class="count">2</span>
+
+   </button>
+
+   <br><br><br>
+
+   <div class="women-fashion">
+
+      <div class="offer">30% OFF</div>
+
+   </div>
+
+</body>
+
+</html>
+
+
+
+CSS Z-Index
+
+    - It is used to control the overlapping elements in page.
+
+    - It allows to send element back or backward and front or forward.
+
+    - To stack elements you have to configure position as “absolute”. 
+
+    - All elements in stack must be configured using “z-index”. 
+
+    - Z-index starts with “0”, which is behind all elements in stack.
+
+
+
+Syntax:
+
+       div {
+
+           position: absolute;
+
+           z-index: 0;
+
+       }
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Document</title>
+
+   <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+   <style>
+
+       .women-fashion{ 
+
+          width: 500px;
+
+          height: 300px;
+
+          background-image: url("./images/women-fashion.jpg");
+
+          background-size: cover;
+
+          border-radius: 20px;
+
+          border:4px solid red;
+
+          z-index: 0;
+
+       }
+
+       .men-fashion{ 
+
+          width: 400px;
+
+          height: 250px;
+
+          background-image: url("./images/men-fashion.jpg");
+
+          background-size: cover;
+
+          border-radius: 20px;
+
+          border:4px solid red;
+
+          left: 350px;
+
+          top: 150px;
+
+          z-index: 1;
+
+       }
+
+       .kids-fashion{ 
+
+          width: 300px;
+
+          height: 200px;
+
+          background-image: url("./images/kids-fashion.jpg");
+
+          background-size: cover;
+
+          border-radius: 20px;
+
+          border:4px solid red;
+
+          left: 150px;
+
+          top: 250px;
+
+          z-index: 2;
+
+       }
+
+       div {
+
+         position: absolute;
+
+       }
+
+   </style>
+
+</head>
+
+<body>
+
+    <div class="women-fashion"></div>
+
+    <div class="men-fashion"></div>
+
+    <div class="kids-fashion"></div>
+
+</body>
+
+</html>
+
+
+
+CSS Float & Clear
+
+   - It allows to float an element to left or right.
+
+   - Float will keep the element floating with content in backdrop. 
+
+   - Float effects the adjacent elements. 
+
+   - Hence the adjacent elements requires a “clear” attribute to clear left, right or both sides.
+
+
+
+Syntax:
+
+   div {
+
+        float :left;
+
+   }
+
+   p { 
+
+       clear: left;
+
+   }
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Document</title>
+
+   <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+   <style>
+
+       .left {
+
+         float: right;
+
+       }
+
+       .right {
+
+         float: left;
+
+       }
+
+       p {
+
+         clear: both;
+
+       }
+
+   </style>
+
+</head>
+
+<body>
+
+    <h1 class="left">Left</h1>
+
+       
+
+    <h1 class="right">Right</h1>
+
+    <p>Welcome</p>
+
+</body>
+
+</html>
+
+
+
+CSS Background
+
+   - background-color
+
+   - background-image
+
+   - background-position [top, left, right, bottom, center]
+
+   - background-repeat [repeat, no-repeat, repeat-x, repeat-y]
+
+   - background-attachment  [fixed, scroll]
+
+   - background-clip [ border-box, content-box]
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Document</title>
+
+   <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+   <style>
+
+       body {
+
+         background-image: url("./images/a1.jpg"), url("./images/a10.jpg");
+
+         background-repeat: no-repeat, repeat;
+
+         background-position: center center;
+
+         height: 100vh;
+
+         background-size: 200px 200px, 200px 200px;
+
+       }
+
+
+
+   </style>
+
+</head>
+
+<body>
+
+    
+
+</body>
+
+</html>
+
+
+
+   Note: Background Image can have gradient color
+
+               a) linear-gradient
+
+               b) radial-gradient 
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Document</title>
+
+   <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+   <style>
+
+       body {
+
+         
+
+         background-image: radial-gradient(red 50%, yellow);
+
+         height: 100vh;
+
+         
+
+       }
+
+
+
+   </style>
+
+</head>
+
+<body>
+
+    
+
+</body>
+
+</html>

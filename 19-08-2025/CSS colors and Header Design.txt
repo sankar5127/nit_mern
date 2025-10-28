@@ -1,0 +1,405 @@
+1. <header>
+
+2. <aside>
+
+3. <nav>
+
+4. <article> 
+
+   - It is a container for display latest trends, updates or highlights of current context. 
+
+   - You can use article in header or section. 
+
+
+
+5. <section>
+
+   - It configures are between header and footer.
+
+   - Typically it comprises of complete information about business.
+
+
+
+Syntax:
+
+       <header> </header>
+
+       <section>
+
+               … body content …
+
+       </section>
+
+       <footer> </footer>
+
+
+
+CSS Colors:
+
+   1. Color Name
+
+               {
+
+                color: yellow;
+
+               }
+
+
+
+   2. Shade Name
+
+               {
+
+                color: lightyellow;
+
+               }
+
+
+
+   3. Hexadecimal 
+
+               {
+
+                 color: #rgb  (or) #rrggbb 
+
+               }
+
+
+
+   4. rgb()
+
+               - It is a combination of Red, Green and Blue color.
+
+               - Each color value can range from 0 to 255.
+
+
+
+               {
+
+                 color: rgb(redValue, greenValue, blueValue);
+
+                 color: rgb(255, 0, 0);
+
+               }
+
+
+
+   5. rgba()
+
+               - It is a combination of Red, Green, Blue and Alpha.
+
+               - Alpha is transparency ranges from 0 to 1. 
+
+       
+
+               {
+
+                 color: rgba(redValue, greenValue, blueValue, alphaValue);
+
+                 color: rgba(0,0,0, 0.6);
+
+               }
+
+
+
+   6. hsl()
+
+               - It is a combination of Hue, Saturation and Lightness. 
+
+               - Hue is an angle of colors
+
+                           0 to 120 degrees => Red
+
+                           121 to 240 degrees => Green
+
+                           241 to 360 degrees => Blue
+
+               - Saturation is grey % from 0 to 100. 
+
+                           0 => complete grey shade
+
+                           100 => removes grey from color 
+
+               - Lightness is brightness from 0 to 100%
+
+           
+
+               {
+
+                  color: hsl (hue, sat, light);
+
+                  color: hsl (10deg, 50%, 50%);
+
+               }
+
+
+
+   7. hsla()
+
+               - It is a combination of Hue, Saturation, Lightness and Alpha.
+
+           
+
+               {
+
+                 color: hsl(hue, sat, light, alpha);
+
+                 color: hsl(10deg, 50%, 50%, 0.6);
+
+               }
+
+
+
+               <body bgcolor=“rgb(255,0,0)”>     // invalid
+
+
+
+   8. Gradient Colors
+
+               - Gradient a set of colors in specific orientation. 
+
+               - You can apply gradient only by using “background-image” attribute of CSS.
+
+               - Recommended gradients are
+
+                   a) linear-gradient
+
+                   b) radial-gradient
+
+
+
+                {
+
+                 background-image: linear-gradient(direction, color1 with %, color2);
+
+               }
+
+                                       
+
+               direction: top, left, right, bottom, angle.
+
+               color with 1 to 100% occupency.
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        body {
+
+            background-size: cover;
+
+        }
+
+        .shade{
+
+            height: 700px;
+
+            background-image: linear-gradient(-60deg, red, yellow, green)
+
+        }
+
+    </style>
+
+</head>
+
+<body background="./images/banner.jpg">
+
+ <div class="shade">
+
+
+
+ </div>
+
+</body>
+
+</html>
+
+
+
+
+
+Ex: Bootstrap header
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bootstrap</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+        header {
+
+            display: flex;
+
+            flex-direction: row;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 20px;
+
+            font-size: 20px;
+
+            font-family: Arial;
+
+            background-color:#712cf9;
+
+            color:white;
+
+        }
+
+        aside {
+
+            display: inline;
+
+        }
+
+        .bi-bootstrap {
+
+            font-size: 25px;
+
+        }
+
+        nav span {
+
+            padding-right: 20px;
+
+        }
+
+        aside span {
+
+            padding-right: 10px;
+
+        }
+
+        .search-bar {
+
+            background-color: rgba(182, 77, 230, 0.542);
+
+            padding: 10px;
+
+            width: 300px;
+
+            display: flex;
+
+            flex-direction: row;
+
+            justify-content: space-between;
+
+        }
+
+        .bi-command{
+
+            background-color: rgb(64, 8, 118);
+
+            padding: 5px;
+
+            font-size: 12px;
+
+            border-radius: 5px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div>
+
+           <nav>
+
+            <span class="bi bi-bootstrap"></span>
+
+            <span>Docs</span>
+
+            <span>Examples</span>
+
+            <span>Icons</span>
+
+            <span>Themes</span>
+
+            <span>Blog</span>
+
+           </nav>
+
+        </div>
+
+        <div>
+
+            <div class="search-bar">
+
+                <span class="bi bi-search"> Search </span>
+
+                <span class="bi bi-command">K</span>
+
+            </div>
+
+        </div>
+
+        <div>
+
+            <aside>
+
+                <span class="bi bi-github"></span>
+
+                <span class="bi bi-twitter-x"></span>
+
+                <span class="bi bi-opencollective"></span>
+
+            </aside>
+
+            <span>|</span>
+
+            <span>V5.3</span>
+
+            <span>|</span>
+
+            <span class="bi bi-sun-fill"></span>
+
+            <span class="bi bi-caret-down-fill"></span>
+
+        </div>
+
+    </header>
+
+</body>
+
+</html>
+
+
+
+Task:  Try creating header of Leetcode 
+
+
+
+https://leetcode.com/problems/create-hello-world-function/description/?envType=study-plan-v2&envId=30-days-of-javascript

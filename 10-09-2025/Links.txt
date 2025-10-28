@@ -1,0 +1,211 @@
+6. How to open link target in same window along with existing content?
+
+A. - By using HTML 5 <iframe> element. 
+
+   - It allows to embed any external content into page. How ever browser must support the 
+
+   relative plugins. 
+
+   - Link target can refer to iframe, so that it opens in iframe. 
+
+
+
+Syntax:
+
+       <a href=“./file_path”  target=“preview”>  Text </a>
+
+
+
+       <iframe  name=“preview”  width=“100%” height=“600”> </iframe>
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        body {
+
+            display: grid;
+
+            grid-template-columns: 2fr 10fr;
+
+        }
+
+        iframe {
+
+            border:none;
+
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+   <nav>
+
+      <div>
+
+         <a href="./nareshit-cards.html" target="preview"> Naresh IT Cards </a>
+
+      </div>
+
+      <div>
+
+         <a target="preview" href="./images/a1.jpg"> <img src="./images/a1.jpg" width="100" height="100"> </a>
+
+      </div>
+
+      <div>
+
+         <a target="preview" href="./images/a10.jpg"> <img src="./images/a10.jpg" width="100" height="100"> </a>
+
+      </div>
+
+      <div>
+
+        <a target="preview" href="https://www.youtube.com/embed/tjzVhBF0cuY"&gt; JavaScript Session-1 </a>
+
+      </div>
+
+      <div>
+
+        <a target="preview" href="https://www.youtube.com/embed/Pj_EjogvU7g"&gt; Next GEN AI </a>
+
+      </div>
+
+   </nav>
+
+   <main>
+
+        <iframe width="100%" name="preview" height="600"></iframe>
+
+   </main>
+
+</body>
+
+</html>
+
+
+
+ Note: You can display any content directly inside iframe by using “src” attribute. 
+
+
+
+          <iframe  src=“file_path / url”  width=“”  height=“” noframe allowFullScreen> </iframe>
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+
+
+    <iframe src="https://www.slideshare.net/slideshow/embed_code/key/yEqCQIngghYfqE?startSlide=1&quot; width="597" height="486" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border: var(--border-1) solid #CCC; border-width:1px; margin-bottom:5px;max-width: 100%;" allowfullscreen></iframe>
+
+    <iframe src="https://www.youtube.com/embed/tjzVhBF0cuY"></iframe&gt;
+
+    <iframe src="https://www.youtube.com/embed/Pj_EjogvU7g"></iframe&gt;
+
+    <iframe src="./nareshit-cards.html"></iframe>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/tjzVhBF0cuY?si=c7ZQ2vNQ8T7zoGKq&quot; title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</body>
+
+</html>
+
+ 
+
+Note: HTML upto version 4 uses <frameset> with collection of <frame> elements.
+
+
+
+Syntax:
+
+           <!DOCTYPE html>
+
+           <html>
+
+             <head> </head>
+
+             <frameset  rows|cols=“20%, 70%, 10%”>
+
+               <frame> </frame>
+
+               <frame src=“”> </frame>
+
+               <frame> </frame>
+
+            </frameset>
+
+           </html>
+
+
+
+                                                        HTML Tables
+
+ - Tables are used to present data in rows and columns.
+
+ - Real world applications use tables for data grids. 
+
+ - Data grid comprises of data arranged in rows and columns, and enables features like
+
+   filtering, sorting, searching etc.
+
+ - HTML upto 4 version used tables for layout design, but not recommended for modern designs.
+
+ - Tabular layout is not good for SEO and responsive pages. 
+
+ - HTML 5 table elements
+
+           
+
+       <table>
+
+       <thead>
+
+       <tbody>
+
+       <tfoot>
+
+       <tr>
+
+       <th>
+
+       <td>
+
+       <colgroup>
+
+       <caption>

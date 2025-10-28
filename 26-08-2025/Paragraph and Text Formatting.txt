@@ -1,0 +1,397 @@
+Blockquote & Paragraph
+
+
+
+FAQ’s
+
+1. Set line, word and char space
+
+2. First line indent
+
+3. Drop Cap 
+
+4. Why blockquote 
+
+
+
+5. How to design scrollable paragraph content?
+
+A. By controlling “overflow”. CSS over flow comprises of 
+
+       a) hidden
+
+       b) scroll
+
+       c) auto
+
+
+
+Syntax:
+
+       p {
+
+           width : 400px;
+
+           height: 200px;
+
+           border: 1px solid gray;
+
+           overflow: auto;
+
+       }
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+       .terms {
+
+          width: 500px;
+
+          height: 300px;
+
+          border:1px solid gray;
+
+          padding: 20px;
+
+          text-align: justify;
+
+          overflow: auto;
+
+       }
+
+    </style>
+
+</head>
+
+<body>
+
+  <h3>Terms of Service</h3>  
+
+  <div class="terms">
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui eveniet aliquid commodi porro illum, dolore asperiores non in, facilis temporibus molestiae minima repellat autem? Molestiae maxime dicta alias explicabo blanditiis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe in itaque distinctio minima perspiciatis modi praesentium delectus omnis similique optio, provident ipsam possimus consequuntur neque amet maiores iusto! Eos, doloribus!</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui eveniet aliquid commodi porro illum, dolore asperiores non in, facilis temporibus molestiae minima repellat autem? Molestiae maxime dicta alias explicabo blanditiis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe in itaque distinctio minima perspiciatis modi praesentium delectus omnis similique optio, provident ipsam possimus consequuntur neque amet maiores iusto! Eos, doloribus!</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui eveniet aliquid commodi porro illum, dolore asperiores non in, facilis temporibus molestiae minima repellat autem? Molestiae maxime dicta alias explicabo blanditiis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe in itaque distinctio minima perspiciatis modi praesentium delectus omnis similique optio, provident ipsam possimus consequuntur neque amet maiores iusto! Eos, doloribus!</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui eveniet aliquid commodi porro illum, dolore asperiores non in, facilis temporibus molestiae minima repellat autem? Molestiae maxime dicta alias explicabo blanditiis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe in itaque distinctio minima perspiciatis modi praesentium delectus omnis similique optio, provident ipsam possimus consequuntur neque amet maiores iusto! Eos, doloribus!</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui eveniet aliquid commodi porro illum, dolore asperiores non in, facilis temporibus molestiae minima repellat autem? Molestiae maxime dicta alias explicabo blanditiis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe in itaque distinctio minima perspiciatis modi praesentium delectus omnis similique optio, provident ipsam possimus consequuntur neque amet maiores iusto! Eos, doloribus!</p>
+
+  </div>
+
+</body>
+
+</html>
+
+
+
+6. How to use ellipsis in paragraph?
+
+A. By using CSS attributes
+
+       a) overflow
+
+       b) text-overflow
+
+       c) white-space 
+
+
+
+Syntax:
+
+       p {
+
+           width : 400px;
+
+           border: 1px solid gray;
+
+           padding: 5px;
+
+           white-space: nowrap;
+
+           overflow: hidden;
+
+           text-overflow: ellipsis;
+
+       }
+
+
+
+7. How to display screen tip for any content in page?
+
+A. By using “title”. 
+
+       
+
+           <h1  title=“Hyper Text Markup Language”>  HTML </h1>
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+       p {
+
+         width: 350px;
+
+         border:1px solid gray;
+
+         padding: 5px;
+
+         white-space: nowrap;
+
+         overflow: hidden;
+
+         text-overflow: ellipsis;
+
+       }
+
+    </style>
+
+</head>
+
+<body>
+
+   <h1 title="Hyper Text Markup Language">HTML</h1>
+
+   <p title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eligendi debitis iure suscipit facilis iste mollitia aspernatur exercitationem ratione nihil. Iure illum obcaecati eaque cumque minima ea excepturi mollitia ut!">
+
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eligendi debitis iure suscipit facilis iste mollitia aspernatur exercitationem ratione nihil. Iure illum obcaecati eaque cumque minima ea excepturi mollitia ut!
+
+   </p>
+
+</body>
+
+</html>
+
+
+
+
+
+8. How to display paragraph in multiple columns?
+
+A. You can use “display” with “grid” style.
+
+   You can use CSS “columns”.
+
+
+
+   a) columns
+
+   b) column-gap
+
+   c) column-width
+
+   d) column-rule
+
+
+
+Syntax:
+
+   .container {
+
+           columns : 3;
+
+           column-gap: 20px;
+
+           column-rule : 1px dotted gray;
+
+    }
+
+
+
+http://epaper.deccanchronicle.com/articledetailpage.aspx?id=19108039
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+       .news {
+
+         width: 600px;
+
+         text-align: justify;
+
+         border: 1px solid black;
+
+         padding: 20px;
+
+         box-shadow: 5px 4px 2px gray;
+
+       }
+
+       .news-title {
+
+         font-size: 50px;
+
+         font-weight: bold;
+
+         word-spacing: 5px;
+
+       }
+
+       .news-details {
+
+          columns:3;
+
+          column-gap: 20px;
+
+          column-rule: 2px dotted gray;
+
+          margin-top: 20px;
+
+          font-size: 14px;
+
+       }
+
+       h3 {
+
+        background-color: black;
+
+        color:white;
+
+        padding: 5px;
+
+       }
+
+    </style>
+
+</head>
+
+<body>
+
+   <div class="news"> 
+
+      <div class="news-title">Send fresh list of banned<br> lands of regn, HC tells CS</div>
+
+      <div class="news-details">
+
+        <div>
+
+           <h4>VUJJINI <br> VAMSHIDHAR | DC </h4>
+
+        </div>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam vero quaerat illum recusandae nesciunt quam voluptates officiis libero. Quis iusto sed itaque nulla exercitationem nostrum, tempore magni autem repellendus tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, non laborum tempore quae veniam id excepturi sit facere ipsa rem, illum omnis mollitia illo amet sunt pariatur! Et, laboriosam quos! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur dolor incidunt assumenda aspernatur minima id deleniti nesciunt ipsum quos suscipit necessitatibus aliquam, corrupti at iure enim quia nulla! Vel, eum! lo</p>
+
+        <h3>Updates</h3>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam vero quaerat illum recusandae nesciunt quam voluptates officiis libero. Quis iusto sed itaque nulla exercitationem nostrum, tempore magni autem repellendus tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, non laborum tempore quae veniam id excepturi sit facere ipsa rem, illum omnis mollitia illo amet sunt pariatur! Et, laboriosam quos! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur dolor incidunt assumenda aspernatur minima id deleniti nesciunt ipsum quos suscipit necessitatibus aliquam, corrupti at iure enim quia nulla! Vel, eum! lo</p>
+
+      </div>
+
+   </div>
+
+</body>
+
+</html>
+
+
+
+Text Formatting in HTML
+
+
+
+1. <font>            It configure face, size and color for text. 
+
+                       a) face    : It refers font family name.
+
+                       b) size    : It refers to level number from 1 to 7.
+
+                       c) color    : It refers to color name, code etc.
+
+Syntax:
+
+       <font face=“Arial” size=“7” color=“#f00”>  Text </font>
+
+
+
+FAQ’s: 
+
+1. What is “7” refers to in font size?
+
+A. HTML font size can be configures in 7 levels, browser uses levels as
+
+       
+
+           1 x-small
+
+           2 small
+
+           3 normal
+
+           4 large
+
+           5 x-large
+
+           6 xx-large
+
+           7 xxx-large 
+
+
+
+2. What is default font size?
+
+A. It is “3”.
+
+
+
+3. What are web safe fonts?
+
+A. Web safe refers to fonts that are available across all devices. 
+
+   The default web safe fonts are
+
+       a) serif
+
+       b) sans-serif
+
+       c) monospace 
+
+
+
+Note: Never use <font> in HTML. It is not recommended for modern web design.

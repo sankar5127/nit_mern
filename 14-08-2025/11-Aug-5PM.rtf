@@ -1,0 +1,149 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28900\viewh15240\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 Summary\
+- Browser Architecture\
+		UI\
+		UI Backend\
+		Browser Engine\
+		Rendering Engine\
+		JavaScript Interpreter \
+		Networking\
+		Data Persistence \
+- HTML Parsing \
+		Markup => Bytes => Chars => Tokens => Elements Nodes => DOM => Layout => Render => Paint\
+\
+- Evolution / Versions  HTML 5  - WHATWG \
+\
+											                 
+\f1\b HTML Elements
+\f0\b0 \
+1. Normal Element\
+	- It returns a presentation directly on callback. \
+	- It starts the presentation without additional attributes. \
+	- It can\'92t stop implicitly.\
+	- You have to stop explicitly by using an end token. \
+\
+			<b>			Start Token\
+			</b>			End Token \
+\
+2. Void Element\
+	- It will not return any presentation directly on callback.\
+	- It requires additional attributes to return a presentation. \
+	- It returns exactly the defined content.\
+	- It stops implicitly. Hence doesn\'92t require end token.\
+	- It is a self ending element.\
+\
+			<img>			Image start token \
+\
+\
+3. RC Data Element\
+	- Rich Content data element. \
+	- It is used to present only plain string content. \
+	- Plain string comprises of alphabet, number and special chars.\
+	- It can\'92t contain formats like styles, color, effects etc.\
+\
+			<textarea> </textarea>\
+\
+4. Raw Text Element\
+	- It is presented by using raw text.\
+	- It doesn\'92t require any markup.\
+	- It doesn\'92t require a token. \
+\
+			&copy; (c) \
+			&#8377; \
+\
+5. Foreign Element\
+	- It is a HTML element but not native to HTML. \
+	- It requires a library to plugin.\
+	- Every browser uses additional plugin to use foreign elements. \
+\
+			SVG\
+			CANVAS\
+			MATHML\
+\
+FAQ\'92s:\
+1. What are block level and inline elements?\
+A. Block level element will not allow any another element in the same line. \
+	 Inline element allows any content beside. \
+\
+			<p> 			Block Level\
+			<img>		Inline \
+\
+2. What are semantic and non-semantic elements?\
+A. Semantic elements are for a specific purpose.\
+	Non Semantic elements can be used for any purpose.\
+\
+			<img>		semantic\
+			<div>		non semantic \
+\
+3. What are generic and non-generic elements?\
+A. Generic elements are configured with pre-defined functionality. \
+	 Non Generic elements are static and requires a functionality to configure explicitly. \
+\
+			<form> 		generic\
+			<div>			non-generic \
+	\
+											              
+\f1\b  HTML Page Structure
+\f0\b0 \
+\
+1. A static page extension can be \'93.htm or .html\'94.\
+\
+							index.htm\
+							index.html\
+\
+	FAQ: What is difference between \'93html\'94 & \'93htm\'94?\
+	Ans:  Technically both are same. \'93htm\'94 is extension given for file according to standards of\
+			  operating system. \
+\
+\
+2. Every page must start with a \'93Document Declaration\'94\
+\
+		- Document declaration is required from HTML 5 version.\
+		- It is used to tell the parser that page is designed using HTML 5.\
+\
+					<!DOCTYPE html>\
+\
+		Note: It is always recommended to define token name in lowercase. \
+\
+					<!doctype html>\
+					<!DOCTYPE html> \
+\
+3. Every page have document scope defined using \
+\
+					<html>\
+\
+					</html>\
+\
+4. Every document scope must configure a language for region. If your website is designed for Indian region then it is \'93en-in\'94. \
+\
+					<html lang=\'93en-in\'94>\
+\
+					</html>\
+\
+					lang 	: It is an attribute used to configure regional language of page content.\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}

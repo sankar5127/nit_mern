@@ -1,0 +1,405 @@
+Summary
+
+<br>
+
+<pre>
+
+&nbsp;
+
+<code>
+
+<var>
+
+<samp>
+
+<big>
+
+<small>
+
+<details> 
+
+<summary>
+
+<fieldset>
+
+<legend>
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+        fieldset {
+
+            width: 300px;
+
+            border-left: none;
+
+            border-right: none;
+
+            border-bottom: none;
+
+            text-align: center;
+
+            padding-top: 30px;
+
+        }
+
+        legend {
+
+            text-align: center;
+
+            padding-left: 20px;
+
+            padding-right: 20px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <fieldset>
+
+         <legend> OR </legend>
+
+         <div>
+
+            <span class="bi bi-facebook"></span> Login with Facebook 
+
+         </div>
+
+    </fieldset>
+
+</body>
+
+</html>
+
+
+
+11.  Headings
+
+   - The element <hn> is used for headings.
+
+   - “n” refers to level number from 1 to 6.
+
+
+
+Syntax:
+
+       <h1> Heading 1 </h1>
+
+        …
+
+        …
+
+       <h6> Heading 6 </h6>
+
+
+
+FAQ’s:
+
+1. Why you need a heading element if the same style can be defined without element?
+
+A. To keep topics SEO friendly. 
+
+    Web crawlers can make a summary of topics in page by accessing heading styles.
+
+
+
+2. What are the styles applied for heading element?
+
+A.    Default styles are:
+
+       font-size
+
+       font-weight
+
+       display: block
+
+
+
+3. How to remove any default style?
+
+A. By using CSS inheritance value “unset”.
+
+
+
+Syntax:
+
+           h1 {                                                      h1 {
+
+                 font-weight: unset;
+
+                 font-size: unset;                                all : unset;
+
+                 display: unset;                               
+
+           }                                                            }
+
+
+
+
+
+4. Can you change the default style?
+
+A. Yes.
+
+
+
+
+
+Note: 
+
+       a) Avoid using too many headings in a page. 
+
+       b) Don’t use headings for highlighting any word or sentence. 
+
+
+
+5. What will happen if too many headings are used in a page?
+
+A. Web crawlers will SPAM your page.
+
+
+
+6. How many headings can be in page?
+
+A. There is no limit but depends on content in page. 
+
+
+
+12. Paragraphs & Blockquotes 
+
+
+
+    - <p> element is used for paragraph.
+
+    - <blockquote> is used for block quote, which is a summary for content in page. [SEO]
+
+
+
+FAQ’s:
+
+1. What is the role of block quote? 
+
+A. It summarizes the content in page and makes it SEO friendly. 
+
+
+
+2. How to set first line indent in a paragraph or blockquote?  
+
+A. By using CSS “text-indent” attribute. 
+
+
+
+Syntax:
+
+           p, blockquote {
+
+                   text-indent: 100px;
+
+           }
+
+
+
+3. How to set space between line, words and chars?
+
+A. By using CSS attributes
+
+               
+
+       a) letter-spacing
+
+       b) word-spacing
+
+       c) line-height 
+
+
+
+Syntax:
+
+       p, blockquote {
+
+          letter-spacing : 2px;
+
+          word-spacing: 5px;
+
+          line-height: 40px;
+
+       }
+
+
+
+4. How to set a drop cap?
+
+A.
+
+       a) Access the first letter by using CSS  “::first-letter”  class
+
+
+
+                       p :: first-letter {  }
+
+
+
+       b) Set font size and family etc.
+
+       c) Set CSS “float” to left. 
+
+       d) Control the line height. [ space between lines ]
+
+
+
+Syntax:
+
+       p :: first-letter {
+
+               font-size : 40px;
+
+               font-family: Arial;
+
+               float: left;
+
+               line-height: 40px;
+
+         }
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        blockquote {
+
+            padding-left: 250px;
+
+            padding-right: 250px;
+
+            font-style: italic;
+
+            font-size: 14px;
+
+            text-indent: 100px;
+
+            line-height: 30px;
+
+            word-spacing: 10px;
+
+        }
+
+        h2 {
+
+            letter-spacing: 15px;
+
+        }
+
+        .para1::first-letter {
+
+            font-size: 80px;
+
+            font-weight: bold;
+
+            font-family: Arial;
+
+            float: left;
+
+            line-height: 50px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h2 align="center">HTML</h2>
+
+        <blockquote align="justify">
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit maxime, aliquam eligendi enim suscipit aspernatur eum labore sequi? Quod, quasi illum ducimus voluptatem deleniti ipsa delectus ratione adipisci nobis nihil.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dolorum libero quia vero amet accusamus et exercitationem, sed reiciendis harum recusandae dolorem corrupti voluptatem at cumque praesentium id hic aut.
+
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, alias consequuntur illo rem ut minus fugit, eum odit reiciendis necessitatibus distinctio molestias similique perspiciatis beatae asperiores soluta quod maxime ullam? 
+
+        </blockquote>
+
+        <p align="justify" class="para1">
+
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet animi molestiae molestias, suscipit expedita quod natus ad voluptatibus hic consequuntur error cupiditate quisquam id repellat iusto. Maxime ipsa iusto fugit?
+
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae iure autem non commodi quis similique ipsum excepturi provident ipsam aut tempora, nobis voluptate animi accusamus aspernatur reiciendis distinctio odit quaerat?
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nam delectus voluptates, reprehenderit quam voluptate consequuntur nihil voluptatem expedita. Laborum nemo veritatis quia alias tempora aliquid reprehenderit rerum? Aperiam, culpa.
+
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero veritatis aliquam ipsum aliquid vero asperiores rerum voluptate odit similique quam sed, illum voluptatem facere quasi eum alias a eligendi architecto?
+
+        </p>
+
+       <p align="justify">
+
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur deserunt iusto beatae labore, exercitationem iste consectetur optio earum ab eaque, aut repellat saepe cumque quas voluptatum delectus molestias? Voluptas, amet? 
+
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus ab impedit dolor dolorem. Repudiandae corrupti possimus repellat eaque, et odit? Eius porro, harum numquam eligendi illo excepturi veniam dolorem ratione.
+
+       </p>
+
+       <p align="justify">
+
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur deserunt iusto beatae labore, exercitationem iste consectetur optio earum ab eaque, aut repellat saepe cumque quas voluptatum delectus molestias? Voluptas, amet? 
+
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus ab impedit dolor dolorem. Repudiandae corrupti possimus repellat eaque, et odit? Eius porro, harum numquam eligendi illo excepturi veniam dolorem ratione.
+
+       </p>
+
+       <p align="justify">
+
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur deserunt iusto beatae labore, exercitationem iste consectetur optio earum ab eaque, aut repellat saepe cumque quas voluptatum delectus molestias? Voluptas, amet? 
+
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus ab impedit dolor dolorem. Repudiandae corrupti possimus repellat eaque, et odit? Eius porro, harum numquam eligendi illo excepturi veniam dolorem ratione.
+
+       </p>
+
+       <p align="justify">
+
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur deserunt iusto beatae labore, exercitationem iste consectetur optio earum ab eaque, aut repellat saepe cumque quas voluptatum delectus molestias? Voluptas, amet? 
+
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus ab impedit dolor dolorem. Repudiandae corrupti possimus repellat eaque, et odit? Eius porro, harum numquam eligendi illo excepturi veniam dolorem ratione.
+
+       </p>
+
+</body>
+
+</html>

@@ -1,0 +1,375 @@
+Intra Document Links
+
+   - Set target using “id”
+
+   - Refer to target using “#” 
+
+   - src & href
+
+
+
+Inter Document Links
+
+   - An inter document link allows various interactions like
+
+   
+
+       1) Navigate to any file
+
+       2) Navigate to any URL
+
+       3) Invoke any browser supported application
+
+       4) Invoke any JavaScript function 
+
+
+
+Navigate to File:
+
+   - You can configure a hyperlink that navigates to specific file in application.
+
+   - You can link any type of file.
+
+   - However browser can open and display file content only when relative plugins are 
+
+     available. 
+
+   - Plugin is a special extension used to view or open files in browser. 
+
+   - If relative plugin is not available then file will download.
+
+
+
+Syntax:
+
+       <a href=“./file_path/file_name.ext”> Text | Image </a>
+
+       <a href=“./shopping.html”> Shopping </a>
+
+       <a href=“./pic.jpg”> Image </a>
+
+
+
+FAQ: How to download a linked document always? It must download even if relative plugins          are available in browser.
+
+Ans:  HTML 5 provides a “download” attribute for anchor element, which downloads the
+
+        the target file. 
+
+
+
+Syntax:
+
+           <a href=“./images/react.png”  download=“new_name”> Text | Image </a>
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <h3>Inter Document Links</h3>
+
+    <div>
+
+        <a href="./intra-document-links.html"> Shopper Template</a>
+
+    </div>
+
+    <div>
+
+        <a href="./images/women-fashion.jpg"> Women Fashion </a>
+
+    </div>
+
+    <div>
+
+        <a href="./docs/catalog.pdf"> Catalog </a>
+
+    </div>
+
+    <div>
+
+        <a href="./docs/Angular FAQ.docx"> Angular FAQ's </a>
+
+    </div>
+
+    <div>
+
+        <a href="./images/react.png" download="DSCPNG1001"> React JS PNG Download </a>
+
+    </div>
+
+</body>
+
+</html>
+
+           
+
+Navigate to URL
+
+   - You can configure a hyperlink that can navigate to any remote location.
+
+   - It can access any resource outside application.
+
+   
+
+Syntax:
+
+       <a href=“https://www.amazon.in”>  Amazon India </a>
+
+       <a href=“https://www.amazon.com”> Amazon US </a>
+
+
+
+   - URL must have proper protocol and domain.
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <h3>Inter Document Links</h3>
+
+    <div>
+
+        <a href="https://www.amazon.in"&gt; Amazon India </a>
+
+    </div>
+
+    <div>
+
+        <a href="https://www.amazon.com"&gt; Amazon US </a>
+
+    </div>
+
+    <div>
+
+        <a href="http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB_486265257EDR_F0481570FHAZ00323M_.JPG"&gt; Mars Rover Photo </a>
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+Invoke any supported Application
+
+   - A hyperlink can invoke applications.
+
+   - Browser must support plugins for applications. 
+
+   - Client device must have the configured application. 
+
+   - HTML uses following prefix for “href” 
+
+           
+
+           a) mailto        : It invokes an email app on client device
+
+           b) skype        : It invokes skype app 
+
+           c) tel                : It invokes the phone app 
+
+           d) wa.me        : It invokes WhatsApp in browser 
+
+
+
+Syntax:
+
+       <a href=“any_email@gmail.com”>  Mail </a>
+
+       <a href=“tel:number”> Phone Number </a>
+
+       <a href=“wa.me”> WhatsApp </a>
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <h3>Inter Document Links</h3>
+
+    <address>
+
+        <div class="bi bi-envelope"> You can mail to <a href="info@nareshit.in"> info@nareshit.in </a> </div>
+
+        <div class="bi bi-phone-flip"> You can call on <a href="tel:+919876543210"> +91 9876543210 </a> </div>
+
+        <div class="bi bi-skype"> Skype to <a href="skypeto:info_nareshit@outlook.com"> info_nareshit@outlook.com </a> </div>
+
+        <div class="bi bi-messenger"> WhatsApp : <a href="https://wa.me/+919876543210&quot; > +919876543210 </a> </div>
+
+    </address>
+
+</body>
+
+</html>
+
+ 
+
+Invoke JavaScript Function
+
+   - You can configure custom logic using JavaScript client side.
+
+   - A hyperlink can invoke the Javascript functions to perform custom actions.
+
+   - It uses “javascript” as prefix for “href”.
+
+
+
+Syntax:
+
+   <a href=“javascript: function(){ }” >  Execute </a>
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <h3>Inter Document Links</h3>
+
+    <a href="javascript:window.print()" class="bi bi-printer-fill"> Print Page </a>
+
+</body>
+
+</html>
+
+
+
+FAQ’s:
+
+   1. How to remove underline for hyperlink?
+
+   2. How to change color for visited and active links?
+
+   3. How to download a file always?
+
+   4. How to invoke various apps?
+
+   
+
+5. How to open linked document in a new tab?
+
+A. By using anchor <a> “target” attribute set to “_blank”.
+
+
+
+Syntax:
+
+       <a href=“./pic.jpg”  target=“_blank”>  Pic </a>
+
+
+
+6. How to open linked document in a new window?
+
+A. By using JavaScript “window.open()” method.
+
+
+
+    window.open(“path”, “title”,  “features”);
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <h3>Inter Document Links</h3>
+
+    <a target="_blank" href="./images/women-fashion.jpg"> <img src="./images/women-fashion.jpg" width="50" height="50"> </a>
+
+    <div>
+
+        <a  href="javascript:window.open('./images/men-fashion.jpg', 'Fashion', 'width=400 height=400')"> <img src="./images/men-fashion.jpg" width="50" height="50"> </a>
+
+    </div>
+
+</body>
+
+</html>

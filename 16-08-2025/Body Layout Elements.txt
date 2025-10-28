@@ -1,0 +1,393 @@
+Body Layout 
+
+- HTML upto version 4 uses “tables” for creating a layout. 
+
+- Tables arrange information in rows and columns.
+
+- Tables are not SEO friendly and Responsive. 
+
+- HTML 5 introduced new Semantic and Non Semantic elements for designing page layout.
+
+- It makes the page more SEO friendly and Responsive.
+
+
+
+Non Semantic Elements:
+
+   
+
+   a) <div>
+
+   b) <span>
+
+
+
+   - <div> refers to a division of content. It keeps all relative content together.
+
+   - <span> refers spanning of content along with current context, but can be separated to
+
+     format visually. 
+
+
+
+ CSS Styles for Box Model:
+
+
+
+       margin            : space between border and page.
+
+                               a) margin [short hand for all directions]
+
+                               b) margin-left
+
+                               c) margin-right                                d) margin-top
+
+                               e) margin-bottom
+
+
+
+       padding        : space between border and content inside. 
+
+                               a) padding
+
+                               b) padding-left
+
+                               c) padding-right
+
+                               d) padding-top
+
+                               e) padding-bottom
+
+
+
+       border            : set border for element. It includes various styles and directions.
+
+
+
+                               a) border     [short hand for style, size and color all directions]
+
+                               b) border-left 
+
+                               c) border-right
+
+                               d) border-top
+
+                               e) border-bottom
+
+               
+
+                              Note: border styles can be solid, double, dotted, dashed, groove etc.
+
+
+
+       width            : sets width.
+
+
+
+       height            : sets height.
+
+
+
+Syntax:
+
+           div {
+
+                  margin : 20px;
+
+                  padding: 10px;
+
+                  border: 1px solid red;
+
+            }
+
+
+
+CSS Text Styles
+
+
+
+           font-size            : It configures size for text.
+
+           font-family        : It sets a font family name.            font-weight        : It sets bold.
+
+           font-style            : It sets italics. 
+
+           color                : It sets color for text.
+
+           text-decoration: It sets underline, overline, line-through with color, size & style.
+
+           text-align            : It sets alignment left, center, right, justify.
+
+
+
+Syntax:
+
+           div {
+
+                   font-size : 20px;
+
+                   font-family: Arial , Brush Script MT, etc;
+
+                   font-weight: bold;
+
+                   font-style: italics; 
+
+                   color: red;
+
+                   text-decoration: underline 2px dotted red;
+
+                   text-align: left, center, right, justify;
+
+               }
+
+
+
+Ex: index.html
+
+
+
+<!DOCTYPE html>
+
+<html lang="en-in">
+
+   <head>
+
+        <title>Flipkart</title>
+
+        <link rel="shortcut icon" href="./public/images/favicon.ico">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+           div {
+
+              border: 1px solid black;
+
+              margin: 20px;
+
+              padding: 20px;
+
+              font-size: 20px;
+
+              font-family: Arial;
+
+           }
+
+           span {
+
+              font-weight: bold;
+
+              font-style: italic;
+
+              color:red;
+
+              text-decoration: underline 3px dotted;
+
+           }
+
+        </style>
+
+   </head>
+
+  <body>
+
+     <div>
+
+        Web Technologies
+
+        <div>
+
+            Front End
+
+            <div>
+
+            HTML <br>
+
+            It is <span>markup</span> language. 
+
+            </div>
+
+            <div>
+
+            CSS <br>
+
+            It configures styles.
+
+            </div>
+
+        </div>
+
+        <div>
+
+            Back End
+
+            <div>
+
+            MongoDB <br>
+
+            It is a database.
+
+            </div>
+
+            <div>
+
+            Node JS <br>
+
+            It is a JavaScript runtime.
+
+           </div>
+
+        </div>
+
+     </div>
+
+  </body>
+
+</html>
+
+
+
+Setup Icons library for project: [ bootstrap - icons ]
+
+
+
+1. Download and Install Bootstrap icons for project using following command in terminal 
+
+
+
+       > npm   install   bootstrap-icons  --save
+
+
+
+2. It generates a new folder by name “node_modules” and copies all library files into folder.
+
+
+
+3. All bootstrap icons are kept in a CSS file, which you have to link to webpage. 
+
+
+
+       <link rel=“stylesheet”  href=“./node_modules/bootstrap-icons/font/bootstrap-icons.css”>
+
+   
+
+4. Every icons have a reference class name, which you can apply to any container.
+
+
+
+       <div class=“bi bi-twitter”> </div>
+
+       <span class=“bi bi-cart”> </span>
+
+
+
+   Note: You can get the complete list of icons and their class names from 
+
+              “icons.getbootstrap.com”
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en-in">
+
+   <head>
+
+        <title>Flipkart</title>
+
+        <link rel="shortcut icon" href="./public/images/favicon.ico">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+       <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+        <style>
+
+           div {
+
+              border: 1px solid black;
+
+              margin: 20px;
+
+              padding: 20px;
+
+              font-size: 20px;
+
+              font-family: Arial;
+
+           }
+
+           span {
+
+              font-weight: bold;
+
+              font-style: italic;
+
+              color:red;
+
+              text-decoration: underline 3px dotted;
+
+           }
+
+        </style>
+
+   </head>
+
+  <body>
+
+     <div>
+
+        <span class="bi bi-globe"></span> Web Technologies <span class="bi bi-cart"></span>
+
+        <div>
+
+            Front End <span class="bi bi-truck"> FREE DELIVERY FOR ORDERS ABOVE 1000 </span>
+
+            <div>
+
+            HTML <br>
+
+            It is <span>markup</span> language. 
+
+            </div>
+
+            <div>
+
+            CSS <br>
+
+            It configures styles.
+
+            </div>
+
+        </div>
+
+        <div>
+
+            Back End
+
+            <div>
+
+            MongoDB <br>
+
+            It is a database.
+
+            </div>
+
+            <div>
+
+            Node JS <br>
+
+            It is a JavaScript runtime.
+
+           </div>
+
+        </div>
+
+     </div>
+
+  </body>
+
+</html>

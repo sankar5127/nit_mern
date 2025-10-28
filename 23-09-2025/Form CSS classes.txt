@@ -1,0 +1,329 @@
+Form CSS Classes 
+
+   - Class is a program template.
+
+   - It provides predefined data and logic, which you can customize and implement according
+
+     to the requirements.
+
+   - CSS provides several built in classes for formatting form elements. 
+
+
+
+1. Element State Classes
+
+
+
+           :hover                : It defines the formats to apply when mouse pointer is over element.            :focus                : It sets formats when element gets focus. 
+
+           :read-only            : It sets formats when read-only is defined. 
+
+           :disabled            : It defines formats on disable state.
+
+           :checked            : It sets formats when radio or check box are checked. 
+
+           :visited                : It sets formats for visited links
+
+           :active                : It sets formats when mouse pointer is down on element. 
+
+           :target                : It sets formats when element is target of any hyperlink.
+
+
+
+Ex: hover, active
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+       button {
+
+          background-color: goldenrod;
+
+          border:none;
+
+          padding: 5px;
+
+          border-radius: 5px;
+
+       }
+
+       button:hover {
+
+          background-color: rgb(249, 218, 138);
+
+          cursor:grab;
+
+       }
+
+       button:active {
+
+          border:1px solid goldenrod;
+
+       }
+
+      
+
+    </style>
+
+</head>
+
+<body>
+
+    <button>Register</button>
+
+</body>
+
+</html>
+
+
+
+Ex: read-only, disabled 
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+       input:read-only {
+
+          cursor: not-allowed;
+
+          background-color: rgb(231, 229, 229);
+
+       }
+
+       input+div {
+
+          display: none;
+
+       }
+
+       input:read-only+div {
+
+         display: block;
+
+         color:red;
+
+         font-size: 10px;
+
+       }
+
+       button:disabled {
+
+          cursor: not-allowed;
+
+       }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Register</h2>
+
+    <div>
+
+         <label>User Name</label>
+
+         <div>
+
+            <input type="text" class="UserName"  value="John" >
+
+            <div>You can't modify User Name</div>
+
+         </div>
+
+    </div>
+
+    <div>
+
+         <label>Mobile</label>
+
+         <div>
+
+            <input type="text" class="Mobile"  readonly  value="+919876543210">
+
+            <div>You can't modify mobile.</div>
+
+         </div>
+
+    </div>
+
+    <div>
+
+        <button disabled> Register </button>
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+Ex: focus, checked
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        .Mobile+div {
+
+            display: none;
+
+        }
+
+        .Mobile:focus+div {
+
+            display: block;
+
+            font-size: 10px;
+
+            color:goldenrod;
+
+        }
+
+        .terms+label {
+
+            color:red;
+
+        }
+
+        .terms:checked+label {
+
+            color:green;
+
+        }
+
+        .terms~button {
+
+            display: none;
+
+        }
+
+        .terms:checked~button {
+
+            display: block;
+
+        }
+
+        .ads~aside {
+
+            display: none;
+
+        }
+
+        .ads:checked~aside {
+
+            display: block;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+     <div>
+
+        <input type="checkbox" class="ads"> <label>Show Ads</label>
+
+        <aside>
+
+            <h4>Ads</h4>
+
+            <img src="./images/women-fashion.jpg" width="200" height="200">
+
+        </aside>
+
+     </div>
+
+     <div>
+
+         <label>Mobile</label>
+
+         <div>
+
+            <input type="text" class="Mobile" placeholder="+(1)(000) 000-0000"> 
+
+            <div>US Mobile Format eg: +(1)(000) 000-0000</div>
+
+         </div>
+
+     </div>
+
+     <div>
+
+        <h5>Terms of Service</h5>
+
+        <textarea disabled rows="4" cols="40"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero odit ipsam, ex eaque saepe, voluptatem sequi doloribus illum temporibus enim animi eum suscipit dolores ea. Dolor quod veritatis dolores dolorum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad sapiente et accusantium? Officia id numquam illum aut repudiandae, inventore accusamus est iste sequi! Quam unde, eum amet libero mollitia dolorem! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo voluptatem vero, illum quasi itaque quia ducimus quis rem, sunt, adipisci repudiandae. Natus recusandae molestias harum sed consequatur, alias nihil maxime! </textarea>
+
+        <br><br>
+
+        <input type="checkbox" class="terms"> <label>I Accept</label>
+
+        <br><br>
+
+        <button>Submit</button>
+
+     </div>
+
+</body>
+
+</html>
+
+
+
+2. Validation State Classes
+
+
+
+               :required 
+
+               :optional 
+
+               :in-range
+
+               :out-of-range
+
+               :valid
+
+               :invalid

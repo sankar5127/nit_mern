@@ -1,0 +1,345 @@
+Styles in HTML
+
+ - Styles are set of attributes defined for HTML elements to make them more interactive and responsive.
+
+ - Style is defined using a “Object” model.
+
+ - Object in computer programming is used to keep all relative data and logic together. 
+
+ - Object allows clean separation, easy reusability and extensibility. 
+
+ - “Alan Kay” introduced the concept of Object in to computer programming in early 1960’s.
+
+ - Object is a key and value collection. 
+
+
+
+                       {
+
+                         key : value;
+
+                         key : value;
+
+                       }
+
+
+
+ - In styles key refers to a style attribute and value refers to color, unit, name etc.
+
+ - Styles can defined for HTML elements in 3 ways
+
+
+
+   1. Inline styles
+
+   2. Embedded Styles
+
+   3. External Style Sheets
+
+
+
+ Inline Styles
+
+   - In this technique style attributes are defined for HTML element directly by using
+
+     “style” attribute.
+
+
+
+   Syntax:
+
+               <h1   style=“color:red; border:1px solid red”> 
+
+
+
+   - Inline styles are faster in rendering.
+
+   - Rendering fast will improve performance of page.
+
+   - You can’t reuse the styles for other elements in page. 
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <h1 style="color:red; background-color: yellow; padding: 10px; text-align: center;">Welcome</h1>
+
+</body>
+
+</html>
+
+
+
+Embedded Styles
+
+   - In this technique styles are defined as style object and kept in a <style> container.
+
+   - You can embed <style> container into page in order to use styles.
+
+
+
+Syntax:
+
+           <style>
+
+               selector
+
+               {
+
+                  attribute: value;
+
+                  attribute: value;
+
+               }
+
+           </style>
+
+
+
+FAQ’s:
+
+   1. Where to embed the <style> container? In head or in body?
+
+   A. You can embed in both locations. 
+
+
+
+   2. What is difference between style in head and style in body?
+
+   A. Styles in body are loaded always as a result of “round-trip”.
+
+       Styles in head are cached and requested from cache, so that they can save round trip.
+
+
+
+   3. Can we define multiple style containers in page?
+
+   A. Yes. You can set few styles on round trip and few from cache. 
+
+
+
+   4. If same style attribute is defined for element in all containers, then which set will apply?
+
+   A. The latest will apply.  [ from top to bottom order ]  
+
+       Bottom is latest [ LIFO  Last-In-First-Out ]
+
+
+
+   5. If styles are defined for element using inline and embedded then which set will apply?
+
+   A. First priority is always for inline. 
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        h1 {
+
+            color:red;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <style>
+
+        h1 {
+
+            text-align: center;
+
+            color:blue;
+
+        }
+
+    </style>
+
+    <h1>Welcome</h1>
+
+    <style>
+
+        h1 {
+
+            color:green;
+
+            border:1px solid green;
+
+        }
+
+    </style>
+
+</body>
+
+</html>
+
+
+
+   6. What is MIME type for styles? How it is configured?
+
+   A. MIME type specifies the content type. 
+
+       Browser can understand the content type by using “MIME”.
+
+       Styles MIME is defined using “text/css”.
+
+
+
+Syntax:
+
+           <style type=“text/css”>  </style>
+
+
+
+   Note: “MIME” type “text/css” is not recommended for <link> element when you are linking
+
+             style sheets. 
+
+
+
+           <link rel=“stylesheet”   href=“path” type=“text/css”>      // Not good
+
+       
+
+           rel=“stylesheet”        => It is MIME
+
+
+
+   7. What is media type for styles?
+
+   A. It can control your content for different media devices like
+
+           a) screen        
+
+           b) speech 
+
+           c) print
+
+
+
+Syntax:
+
+           <style type=“text/css”  media=“print”> </script>
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style type="text/css" media="screen">
+
+        .ticket {
+
+            border:4px double red;
+
+            padding: 20px;
+
+            background-color: yellow;
+
+            font-family: Arial;
+
+        }
+
+        .ticket div {
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            color: red;
+
+        }
+
+    </style>
+
+    <style type="text/css" media="print">
+
+        aside {
+
+            display: none;
+
+        }
+
+        .ticket {
+
+            border:none;
+
+            background-color: none;
+
+            font-family: Segoe UI;
+
+        }
+
+        button {
+
+            display: none;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+   <div class="ticket">
+
+      <aside>ads<br><img src="./images/a1.jpg" width="100" height="100"></aside>
+
+      <h1>My Ticket</h1>
+
+      <div>Departure : Hyderabad</div>
+
+      <div>Arrival : Delhi</div>
+
+      <button>Print</button>
+
+   </div>
+
+</body>
+
+</html>

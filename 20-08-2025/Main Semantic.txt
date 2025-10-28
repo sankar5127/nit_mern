@@ -1,0 +1,751 @@
+1. Header
+
+2. Section
+
+3. Nav
+
+4. Aside
+
+5. Article
+
+6. Main
+
+   - Main is considered as entry point. 
+
+   - A web page uses main at entry point for anonymous users.
+
+   - Web page can have multiple entry points.
+
+
+
+CSS Background Image:
+
+
+
+               background-image : url(“path”)
+
+               background-repeat
+
+               background-size
+
+               background-attachment
+
+               background-position
+
+               etc.
+
+
+
+CSS Display Grid
+
+
+
+           display : grid                     : It configures a grid container.
+
+           grid-template-columns   : It separates the container into multiple columns. 
+
+                                                      You have to split columns among 1200px or 12fr [fractions]
+
+Syntax:
+
+
+
+           container
+
+           {
+
+               display : grid;
+
+               grid-template-columns: 4fr 4fr 4fr;     // 3 columns
+
+           }
+
+
+
+CSS Box Shadow & Text Shadow
+
+
+
+           box-shadow        : It sets shadow for container.
+
+           text-shadow        : It sets shadow for text in container.
+
+
+
+   Note: Shadow comprises of 4 values
+
+               a) horizontal shadow [px]
+
+               b) vertical shadow [px]
+
+               c) blur [px]
+
+               d) color
+
+       
+
+Syntax:
+
+               container {
+
+                       box-shadow: 0px 0px 0px color;
+
+                       text-shadow: 0px 0px 0px color;
+
+               }
+
+
+
+CSS “hover” class:
+
+       - It defines actions to perform when mouse pointer is over the element.
+
+       - A pre-defined class is inherited by using “:” inheritance operator.
+
+
+
+Syntax:
+
+           div {
+
+               // normal state;
+
+           }
+
+           div : hover {
+
+               // mouse over state;
+
+           }
+
+
+
+Ex: Shopper-Template.html  [ upto main ]
+
+
+
+<!DOCTYPE html>
+
+<html lang="en-in">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopper Template</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+        header {
+
+            font-family: Arial;
+
+            font-size: 18px;
+
+            padding: 20px;
+
+        }
+
+        .header-row-1 {
+
+            padding: 20px;
+
+            background-color: #ececec;
+
+            display: flex;
+
+            flex-direction: row;
+
+            justify-content: space-around;
+
+        }
+
+        .aside-nav {
+
+            display: flex;
+
+            flex-direction: row;
+
+            justify-content: space-around;
+
+        }
+
+        aside {
+
+            padding-left: 50px;
+
+        }
+
+        .header-row-1 span {
+
+            padding-left: 10px;
+
+            padding-right: 10px;
+
+        }
+
+        .header-row-2 {
+
+            display: flex;
+
+            flex-direction: row;
+
+            justify-content: space-around;
+
+            align-items: center;
+
+            padding: 20px;
+
+        }
+
+        .brand-title {
+
+            font-size: 28px;
+
+            font-weight: bold;
+
+        }
+
+        nav span {
+
+            padding-left: 10px;
+
+            padding-right: 10px;
+
+            font-size: 22px;
+
+        }
+
+        .shortcuts span {
+
+            padding-left: 10px;
+
+            padding-right: 5px;
+
+        }
+
+        article {
+
+            text-align: center;
+
+            background-color: black;
+
+            color:white;
+
+            padding: 10px;
+
+            font-size: 20px;
+
+            font-family: Arial;
+
+        }
+
+        .bi-lightning-fill {
+
+            color:gold;
+
+        }
+
+        section {
+
+            padding: 20px;
+
+        }
+
+        main {
+
+            margin-top: 20px;
+
+            height: 500px;
+
+            display: grid;
+
+            grid-template-columns: 4fr 4fr 4fr;
+
+        }
+
+        .women-fashion{
+
+            background-image: url("./images/women-fashion.jpg");
+
+            background-size: cover;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-around;
+
+            align-items: center;
+
+            opacity: 0.6;
+
+        }
+
+         .men-fashion{
+
+            background-image: url("./images/men-fashion.jpg");
+
+            background-size: cover;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-around;
+
+            align-items: center;
+
+             opacity: 0.6;
+
+        }
+
+         .kids-fashion{
+
+            background-image: url("./images/kids-fashion.jpg");
+
+            background-size: cover;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-around;
+
+            align-items: center;
+
+             opacity: 0.6;
+
+        }
+
+        .main-title {
+
+            color:white;
+
+            font-size: 50px;
+
+            font-weight: bold;
+
+            font-family: Arial;
+
+            text-shadow: 2px 2px 1px black;
+
+        }
+
+        .btn-shop {
+
+            width: 120px;
+
+            background-color: white;
+
+            text-align: center;
+
+            padding: 15px;
+
+            font-family: Arial;
+
+            font-size: 16px;
+
+        }
+
+        .women-fashion:hover{
+
+            opacity: 1;
+
+        }
+
+        .men-fashion:hover {
+
+            opacity: 1;
+
+        }
+
+        .kids-fashion:hover {
+
+            opacity: 1;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header-row-1">
+
+            <div>
+
+                <span class="bi bi-truck"></span>
+
+                <span>FREE SHIPPING WORLD WIDE</span>
+
+                <span>United States <span class="bi bi-chevron-down"></span> </span>
+
+                <span>USD <span class="bi bi-chevron-down"></span> </span>
+
+                <span>English <span class="bi bi-chevron-down"></span> </span>
+
+            </div>
+
+            <div class="aside-nav">
+
+                <div>
+
+                    <span>Shipping</span>
+
+                    <span>FAQ</span>
+
+                    <span>Contact</span>
+
+                </div>
+
+                <div>
+
+                    <aside>
+
+                        <span class="bi bi-facebook"></span>
+
+                        <span class="bi bi-instagram"></span>
+
+                        <span class="bi bi-twitter"></span>
+
+                        <span class="bi bi-youtube"></span>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="header-row-2">
+
+            <div>
+
+                <span class="brand-title">Shopper.</span>
+
+            </div>
+
+            <div>
+
+                <nav>
+
+                    <span>Home</span>
+
+                    <span>Catalog</span>
+
+                    <span>Blog</span>
+
+                    <span>Shop</span>
+
+                    <span>Pages</span>
+
+                    <span>Docs</span>
+
+                </nav>
+
+            </div>
+
+            <div role="navigation" class="shortcuts">
+
+                <span class="bi bi-search"></span>
+
+                <span class="bi bi-person"></span>
+
+                <span class="bi bi-heart"></span>
+
+                <span class="bi bi-cart4"></span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <section>
+
+        <article>
+
+            <span class="bi bi-lightning-fill"></span>
+
+            <span> HAPPY HOLIDAY DEALS ON EVERYTHING </span>
+
+            <span class="bi bi-lightning-fill"></span>
+
+            
+
+        </article>
+
+        <main>
+
+            <div class="women-fashion">
+
+                <div class="main-title">Women</div>
+
+                <div class="btn-shop">
+
+                    <span>Shop Women <span class="bi bi-arrow-right"></span> </span>
+
+                </div>
+
+            </div>
+
+            <div class="men-fashion">
+
+                <div class="main-title">Men</div>
+
+                <div class="btn-shop">
+
+                    <span>Shop Men <span class="bi bi-arrow-right"></span> </span>
+
+                </div>
+
+            </div>
+
+            <div class="kids-fashion">
+
+                <div class="main-title">Kids</div>
+
+                <div class="btn-shop">
+
+                    <span>Shop Kids <span class="bi bi-arrow-right"></span> </span>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </section>
+
+</body>
+
+</html>
+
+
+
+Note: You can’t adjust width for span element. It requires CSS display attribute set to 
+
+          “inline-block”.
+
+
+
+Ex: Netflix Design
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Netflix</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+        body {
+
+            background-size: cover;
+
+        }
+
+        .shade {
+
+            background-color: rgba(0,0,0,0.5);
+
+            height: 1000px;
+
+            margin-top: -20px;
+
+            margin-left: -20px;
+
+        }
+
+        header {
+
+            color:white;
+
+            padding: 50px;
+
+            display: flex;
+
+            flex-direction: row;
+
+            justify-content: space-between;
+
+        }
+
+        .brand-title {
+
+            color:red;
+
+            font-size: 50px;
+
+            font-weight: bold;
+
+            font-family: Arial;
+
+        }
+
+        .lang{
+
+            border:1px solid white;
+
+            padding: 10px;
+
+            border-radius: 5px;
+
+        }
+
+        .btn-signin {
+
+            background-color: red;
+
+            padding: 10px;
+
+            margin-left: 20px;
+
+            font-size: 16px;
+
+            font-family: Arial;
+
+            border-radius: 5px;
+
+        }
+
+        section {
+
+            color:white;
+
+            text-align: center;
+
+            padding-top: 150px;
+
+        }
+
+        .section-title {
+
+            font-family: Arial;
+
+            font-size: 60px;
+
+            font-weight: bold;
+
+        }
+
+        .section-subtitle{
+
+             font-family: Arial;
+
+            font-size: 30px;
+
+            padding-top: 20px;
+
+        }
+
+        main {
+
+            margin-top: 40px;
+
+        }
+
+        .email {
+
+            padding: 20px;
+
+            border:1px solid white;
+
+            width: 400px;
+
+            display: inline-block;
+
+            font-size: 20px;
+
+            text-align: left;
+
+            background-color: rgba(0,0,0,0.5);
+
+            margin-right: 20px;
+
+            font-family: Arial;
+
+        }
+
+        .btn-start {
+
+            padding: 20px;
+
+            background-color: red;
+
+            font-family: Arial;
+
+            font-size: 20px;
+
+        }
+
+    </style>
+
+</head>
+
+<body background="./images/netflix-banner.jpg">
+
+  <div class="shade">
+
+    <header>
+
+        <div>
+
+            <span class="brand-title">NETFLIX</span>
+
+        </div>
+
+        <div>
+
+            <span class="lang"> <span class="bi bi-translate"></span> Language <span class="bi bi-chevron-down"></span> </span>
+
+            <span class="btn-signin"> Signin </span>
+
+        </div>
+
+    </header>
+
+    <section>
+
+        <div class="section-title">Unlimited movies, TV<br> shows and more</div>
+
+        <div class="section-subtitle">Starts at ₹149. Cancel at any time.</div>
+
+        <main>
+
+             <div>
+
+            <span class="email">Your email</span>
+
+            <span class="btn-start"> Get Started <span class="bi bi-chevron-right"></span> </span>
+
+             </div>
+
+        </main>
+
+    </section>
+
+  </div>
+
+</body>
+
+</html>

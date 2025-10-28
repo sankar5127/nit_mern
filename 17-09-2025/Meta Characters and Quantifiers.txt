@@ -1,0 +1,253 @@
+Pattern => Regular Expression => Meta Characters
+
+
+
+       Meta Character            Description
+
+           
+
+               ?                            zero or one occurrence of a character.
+
+                   
+
+                                           Syntax:
+
+                                               pattern=“colou?r”    color, colour 
+
+       
+
+               *                            zero or more occurrences of a character
+
+
+
+                                           Syntax:
+
+                                               pattern=“colou*r”    color, colour, colouur, colouur
+
+
+
+               +                            one or more occurrences of a character
+
+
+
+                                           Syntax:
+
+                                               pattern=“colou+r”    colour, colouur, colouuur
+
+
+
+               . (dot)                    refers to any single character. Alphabet, number or special char.
+
+ 
+
+                                           Syntax:
+
+                                               pattern=“.at”    cat, bat, rat, 2at, $at ..
+
+       
+
+               | (pipe)                    refers to “OR”, which allows multiple sets.
+
+
+
+                                           Syntax:
+
+                                               pattern=“red | blue | green”       red, blue, green
+
+
+
+               \  (backslash)            It is an escape sequence character use to transform a 
+
+                                           meta character into normal character & vice versa.
+
+
+
+                                           Syntax:
+
+                                               pattern=“gmail\.com”        gmail.com
+
+           
+
+               [ ]                            It is used to define a set of chars or range of chars. 
+
+               
+
+                               [ a, d, s ]             only specified chars allows
+
+                               [ a-z ]             only a char is specified range is allowed
+
+                               [ A-Z, a-z ]      both upper & lower case allowed 
+
+                               [ 0-9 ]             only a number allowed 
+
+                               [ a, 5, M ]        only specified allowed
+
+                               [ a-m, A-M, 4-9]  only chars in specified range allowed 
+
+                               [ #, $, % ]        only specified special chars allowed 
+
+           
+
+                               Syntax:
+
+                                   pattern=“[A-Z][0-9][a-m][4-9]”    =>  D6e8
+
+                                               pattern=“[A-Z][A-Z]?”                  => AB, D, EF, H
+
+           
+
+               ( )                            It is used to represent a union in expression.
+
+                                           It sets priority in expression. 
+
+
+
+               [^ ]                        It is used to exclude the specified. 
+
+
+
+                                           [^a-z]                 => A-Z, 0-9, Special Chars allowed
+
+                                           [^@, #, $, % ]    => specified special chars not allowed
+
+                                           [^A-Z,0-9,a-z]    => only special chars allowed
+
+                                           [^a, A, D, d, S]   => only specified not allowed 
+
+
+
+               \^                            Expression starts with
+
+
+
+               $                            Expression ends with
+
+
+
+                                           Syntax:
+
+                                               pattern = “\^ expression $”
+
+               
+
+               \d                            It refers to number from 0 to 9. [0-9]
+
+
+
+                                           Syntax:
+
+                                               pattern=“\d\d”        =>   23, 45, 44
+
+                                               pattern=“\d\d?”      =>    2, 34, 56, 3
+
+           
+
+               \D                            It excludes numbers. All other are allowed, only number not
+
+                                           allowed. [ non-numeric ]
+
+
+
+                                           Syntax:
+
+                                               pattern=“\d\D\d”     => 4A3, 9W9
+
+
+
+               \w                            It refers to word chars. 
+
+                                           Word chars include “A-Z, a-z, 0-9, _”
+
+
+
+               \W                        It refers to non-word chars.
+
+                                           All special chars except underscore “_” . 
+
+                   
+
+                                           Syntax:
+
+                                               pattern=“\d\W\w”      => 4$4, 4$A, 4$b, 4$_
+
+               
+
+               \s                            It refers to blank space. 
+
+
+
+                                           Syntax:
+
+                                               pattern=“[A-Z]\s\d\s\D”    => D 8 A, D 8 $,  D 8 d
+
+
+
+               \i                            It is used to ignore capitalization in expression.
+
+   
+
+                                           Syntax:
+
+                                               pattern=“colou?r\i”          => colour, Colour, color, Color 
+
+                
+
+   
+
+           Quantifier                    Description
+
+
+
+            { 4 }                            Exactly specified number of chars 
+
+
+
+                                           Syntax:
+
+                                           \d{2}        => only 2 digits number
+
+                                           \d{10}      => only 10 digits number
+
+                                           [A-Z]{2}\d{2}  => AB45, FF56
+
+
+
+           { 4, 10 }                        Minimum 4 and maximum 10
+
+           
+
+                                           Syntax:
+
+                                           \d{2,4}        => 33, 532, 5674
+
+                                           [A-Z]{4,10} => only uppercase letters between 4 to 10
+
+
+
+           { 4,  }                            Minimum 4 and maximum any
+
+
+
+Ex:
+
+   1. Write a pattern to validate mobile number starting with +91 and must have only 10 digits
+
+       after +91.
+
+
+
+                   pattern=“\+91\d{10}”
+
+                   pattern=“\+91[0-9]{10}”
+
+
+
+   2.  Write a pattern to validate following mobile number format
+
+
+
+               US        +(1)(425) 555-0100
+
+
+
+               pattern=“\+\(1\)\(\d{3}\)\s\d{3}-\d{4}”

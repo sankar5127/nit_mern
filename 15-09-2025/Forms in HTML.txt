@@ -1,0 +1,151 @@
+Forms in HTML
+
+     - Form provides an “UI” from where user can interact with our application.
+
+   - A form can handle CRUD operations.
+
+           C        Create
+
+           R        Read
+
+           U        Update
+
+           D        Delete
+
+   - Technically form is a container with collection of elements like button, checkbox, radio,
+
+     listbox, textbox, dropdown etc.
+
+   - Form is a generic container that can validate, submit and reset the data. 
+
+   
+
+Syntax:
+
+           <form>
+
+                   … form elements …
+
+           </form>
+
+
+
+Attributes:
+
+       
+
+       1. Id                ]
+
+       2. Name        ]   Used for referring a form in HTML, CSS and JavaScript. 
+
+       3. Class        ]
+
+
+
+       4. Method        :    It defines the actions to perform. 
+
+                               A form is configured with 2 methods
+
+                               a) GET
+
+                               b) POST
+
+
+
+                               - GET submits form data for fetching information from server.
+
+                               - POST submits form data for saving information on server. 
+
+
+
+                               Syntax:
+
+                                   <form method=“get | post”>
+
+                                   </form>
+
+
+
+                               - The default form method is “GET”. 
+
+FAQ’s: 
+
+   1. Can we submit and save data on server using “GET”?
+
+   A. Yes. But not recommended.
+
+
+
+   2. Why It is not recommended  to submit on GET for saving information?
+
+   A. It is not safe to submit and save on GET.
+
+
+
+GET
+
+   - It submits data as query string.
+
+   - Query string is appended into URL and displayed in address bar of browser.
+
+   - Everyone can view the data.
+
+   - It is stored in browser logs. [history]
+
+   - It can be bookmarked. 
+
+   - It can’t submit complex data, such as binary data.
+
+   - There is limit for data. [2048 to 65535 chars]
+
+   - It is not safe.
+
+   - It is easy to hack your data. 
+
+   - It can cache the data. And saves round trips.  
+
+
+
+POST
+
+   - It submits data as form body.
+
+   - It is safer when compared to GET request. 
+
+   - It is not saved in browser logs.
+
+   - It can’t be bookmarked.
+
+   - It can submit complex data.
+
+   - There is no limit for data.
+
+   - It can’t cache the data. 
+
+
+
+       5. Action        : It specifies the target location where the form data is submitted. 
+
+                             It can be any static or dynamic page.
+
+
+
+                           Syntax:
+
+                            <form method=“get | post” action=“./path/page.html | asp | jsp | php..”>
+
+                            </form>
+
+
+
+       6. Novalidate    : It disables the default HTML validations. 
+
+                              You have to disable default validations while using custom validations.
+
+
+
+                           Syntax:
+
+                             <form method=“get | post”  action=“path”  novalidate>
+
+                             </form>

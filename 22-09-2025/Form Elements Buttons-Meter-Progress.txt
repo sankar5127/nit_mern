@@ -1,0 +1,703 @@
+Checkbox 
+
+Radio Button
+
+Dropdown List
+
+List Box
+
+Textarea 
+
+Label
+
+
+
+Meter 
+
+ - It is used as grade meter to show the status of task processed.
+
+ - It uses an indicator to show the amount of action performed. 
+
+ - Status is displayed by using
+
+       a) min
+
+       b) max
+
+       c) value
+
+       d) low
+
+       e) high
+
+ 
+
+ - Low is a value defined above min and below value. 
+
+ - High is a value defined above low and below value.
+
+ - If low and high are not defined the default they are zero. 
+
+ - If low and high are zero the color is green. 
+
+ - If low and high difference is less then color is red.
+
+ - If low and high difference is more then color is gold. 
+
+
+
+Syntax:
+
+       <meter min=“1” max=“100” value=“100” low=“40” high=“80”>  Gold
+
+       <meter min=“1” max=“100” value=“100” low=“60” high=“80”>  Red
+
+         <meter min=“1” max=“100” value=“100” low=“0” high=“0”>  Green
+
+   
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+       meter {
+
+         width: 200px;
+
+         height: 20px;
+
+       }
+
+    </style>
+
+</head>
+
+<body>
+
+    <form>
+
+       <div>
+
+          <span> 5 <span class="bi bi-star-fill"></span> </span>
+
+            <meter min="1" value="100" max="100"></meter>
+
+          <span> 17,242 </span>
+
+       </div>
+
+       <div>
+
+          <span> 4 <span class="bi bi-star-fill"></span> </span>
+
+            <meter min="1" value="20" max="100"></meter>
+
+          <span> 1242 </span>
+
+       </div>
+
+        <div>
+
+          <span> 2 <span class="bi bi-star-fill"></span> </span>
+
+            <meter min="1" low="40" high="80" value="100" max="100"></meter>
+
+          <span> 30 </span>
+
+       </div>
+
+    </form>
+
+</body>
+
+</html>
+
+
+
+Progress 
+
+   - It is used to show progress of any task performed in page, which includes 
+
+     installing, copying, downloading, uploading, loading etc.
+
+   - It is controlled dynamically using script. 
+
+   - You can configure attributes
+
+           a) min
+
+           b) max
+
+           c) value
+
+
+
+Syntax:
+
+       <progress min=“1” max=“100” value=“30”> 30%
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+       meter {
+
+         width: 200px;
+
+         height: 20px;
+
+       }
+
+    </style>
+
+</head>
+
+<body>
+
+    <form>
+
+       <div>
+
+         Preparing for download <progress></progress>
+
+       </div>
+
+       <div>
+
+          80% Downloaded <progress min="1" max="100" value="80"></progress>
+
+       </div>
+
+    </form>
+
+</body>
+
+</html>
+
+
+
+Buttons
+
+   - Buttons are used to confirm user actions.
+
+   - Buttons are categorized into 2 types
+
+
+
+   a) Generic Buttons
+
+   b) Non Generic Buttons
+
+
+
+   Generic Buttons
+
+       a) HTML 4 Generic Button
+
+               <input type=“submit”>    Submits form data
+
+               <input type=“reset”>    Resets form data
+
+       
+
+       Syntax:        
+
+           <input type=“submit” value=“Register”> 
+
+           <input type=“reset” value=“Cancel”>
+
+       
+
+       b) HTML 5 Generic Button
+
+             <button type=“submit”> Text | Icon | Image </button>
+
+             <button type=“reset”> Text | Icon | Image </button>
+
+
+
+       Note: If type is not defined then the default type is “submit”.
+
+
+
+   Non Generic Button
+
+       a) HTML 4
+
+                   <input type=“button” value=“Print”>
+
+       b) HTML 5
+
+                   <button type=“button”> Text | Icon | Image </button>
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+       meter {
+
+         width: 200px;
+
+         height: 20px;
+
+       }
+
+    </style>
+
+</head>
+
+<body>
+
+    <form>
+
+       <div>
+
+          <input type="checkbox" value="Java" checked> <label>Java</label>
+
+          <input type="checkbox" value="UI"> <label>UI</label>
+
+          <br><br>
+
+          <input type="text" name="User"> 
+
+          <input type="submit" value="Register">
+
+          <input type="reset" value="Cancel">
+
+          <input type="button" value="Print">
+
+       </div>
+
+       <br><br>
+
+       <div>
+
+          <input type="checkbox" value="Java" checked> <label>Java</label>
+
+          <input type="checkbox" value="UI"> <label>UI</label>
+
+          <br><br>
+
+          <input type="text" name="User"> 
+
+          <button type="submit"> <span class="bi bi-person-fill"></span> Register </button>
+
+          <button type="reset"> <img src="./images/a1.jpg" width="20" height="20"> Cancel </button>
+
+          <button type="button"> <span class="bi bi-printer-fill"></span> </button>
+
+       </div>
+
+    </form>
+
+</body>
+
+</html>
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+       body {
+
+         display: flex;
+
+         justify-content: center;
+
+       }
+
+       form {
+
+         border:1px solid gray;
+
+         padding: 20px;
+
+         margin-top: 50px;
+
+         font-family: Arial;
+
+         width:250px;
+
+         border-radius: 10px;
+
+       }
+
+       .login-title {
+
+          font-size: 20px;
+
+          padding-bottom: 20px;
+
+       }
+
+       .form-group {
+
+         margin-bottom: 20px;
+
+       }
+
+       .form-label {
+
+         font-weight: bold;
+
+         padding-bottom: 5px;
+
+         display: block;
+
+       }
+
+       .form-control {
+
+         width: 100%;
+
+         font-size: 20px;
+
+         padding: 2px;
+
+       }
+
+       .btn-register {
+
+          font-size: 20px;
+
+          width: 100%;
+
+          border:none;
+
+          background-color: gold;   
+
+          padding: 5px;
+
+          border-radius: 5px;
+
+       }
+
+       .error-control {
+
+         font-size: 16px;
+
+         color:red;
+
+       }
+
+    </style>
+
+</head>
+
+<body>
+
+    <form>
+
+         <div class="login-title bi bi-person-circle"> Sign in or create account</div>
+
+         <div class="form-group">
+
+             <label for="Email" class="form-label">Enter mobile or email</label>
+
+             <div>
+
+                <input type="text" name="Email" class="form-control">
+
+                <div class="error-control">Name Required</div>
+
+             </div>
+
+         </div>
+
+         <div class="form-group">
+
+             <label for="Password" class="form-label">Password</label>
+
+             <div>
+
+                <input type="password" name="Password" class="form-control">
+
+             </div>
+
+         </div>
+
+         <div class="form-group">
+
+             <label for="City" class="form-label">Your City</label>
+
+             <div>
+
+                <select class="form-control" name="City">
+
+                   <option>Select City</option>
+
+                   <option>Hyderabad</option>
+
+                </select>
+
+             </div>
+
+         </div>
+
+         <div class="form-group">
+
+            <button type="submit" class="btn-register">Register</button>
+
+         </div>
+
+    </form>
+
+</body>
+
+</html>
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+       body {
+
+         display: flex;
+
+         justify-content: center;
+
+       }
+
+       form {
+
+         border:1px solid gray;
+
+         padding: 20px;
+
+         margin-top: 50px;
+
+         font-family: Arial;
+
+         width:250px;
+
+         border-radius: 10px;
+
+       }
+
+       .login-title {
+
+          font-size: 20px;
+
+          padding-bottom: 20px;
+
+       }
+
+       .form-group {
+
+         margin-bottom: 20px;
+
+       }
+
+       .form-label {
+
+         font-weight: bold;
+
+         padding-bottom: 5px;
+
+         display: block;
+
+       }
+
+       .form-control {
+
+         width: 100%;
+
+         font-size: 20px;
+
+         padding: 2px;
+
+       }
+
+       .btn-register {
+
+          font-size: 20px;
+
+          width: 100%;
+
+          border:none;
+
+          background-color: gold;   
+
+          padding: 5px;
+
+          border-radius: 5px;
+
+       }
+
+       .error-control {
+
+         font-size: 16px;
+
+         color:red;
+
+       }
+
+       fieldset {
+
+         border-left: none;
+
+         border-right: none;
+
+         border-bottom: none;
+
+         text-align: center;
+
+       }
+
+       legend {
+
+          padding-left: 10px;
+
+          padding-right: 10px;
+
+       }
+
+    </style>
+
+</head>
+
+<body>
+
+    <form>
+
+         <div class="login-title bi bi-person-circle"> Sign in or create account</div>
+
+         <div class="form-group">
+
+             <label for="Email" class="form-label">Enter mobile or email</label>
+
+             <div>
+
+                <input type="text" name="Email" class="form-control">
+
+                <div class="error-control">Name Required</div>
+
+             </div>
+
+         </div>
+
+         <div class="form-group">
+
+             <label for="Password" class="form-label">Password</label>
+
+             <div>
+
+                <input type="password" name="Password" class="form-control">
+
+             </div>
+
+         </div>
+
+         <div class="form-group">
+
+             <label for="City" class="form-label">Your City</label>
+
+             <div>
+
+                <select class="form-control" name="City">
+
+                   <option>Select City</option>
+
+                   <option>Hyderabad</option>
+
+                </select>
+
+             </div>
+
+         </div>
+
+         <div class="form-group">
+
+            <button type="submit" class="btn-register">Register</button>
+
+         </div>
+
+         <fieldset>
+
+             <legend> OR </legend>
+
+         </fieldset>
+
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,709 @@
+Ex: Naresh IT Cards
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Naresh IT</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+        .card {
+
+            width: 250px;
+
+            border:1px solid gray;
+
+            border-radius: 10px;
+
+            margin: 20px;
+
+        }
+
+        .card-img {
+
+            width: 100%;
+
+            height: 150px;
+
+            border-top-left-radius: 10px;
+
+            border-top-right-radius: 10px;
+
+        }
+
+        .card-body {
+
+            height: 180px;
+
+            padding: 20px;
+
+            font-family: Arial;
+
+        }
+
+        .card-title {
+
+            font-size: 22px;
+
+            text-align: center;
+
+            font-weight: bold;
+
+            margin-bottom: 10px;
+
+        }
+
+        .rating {
+
+            text-align: center;
+
+            color:goldenrod;
+
+            margin-bottom: 20px;
+
+        }
+
+        .course-details div {
+
+           margin-bottom: 15px;
+
+        }
+
+        .card-footer{
+
+            display: grid;
+
+            grid-template-columns: 6fr 6fr;
+
+        }
+
+        .btn-enroll {
+
+            text-align: center;
+
+            font-size: 20px;
+
+            font-family: Arial;
+
+            padding: 10px;
+
+            background-color: blue;
+
+            color:white;
+
+            border-bottom-left-radius: 10px;
+
+        }
+
+        .btn-share{ 
+
+            text-align: center;
+
+            font-size: 20px;
+
+            font-family: Arial;
+
+            padding: 10px;
+
+            background-color: whitesmoke;
+
+            border-bottom-right-radius: 10px;
+
+        }
+
+        main {
+
+            display: flex;
+
+            flex-direction: row;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+
+        <div class="card">
+
+            <div class="card-header">
+
+                <img src="./images/Java.png" class="card-img">
+
+            </div>
+
+            <div class="card-body">
+
+                <div class="card-title">Fullstack Java</div>
+
+                <div class="rating">
+
+                    <span class="bi bi-star-fill"></span>
+
+                    <span class="bi bi-star-fill"></span>
+
+                    <span class="bi bi-star-fill"></span>
+
+                    <span class="bi bi-star-fill"></span>
+
+                    <span class="bi bi-star-half"></span>
+
+                    <span>4.5</span>
+
+                </div>
+
+                <div class="course-details">
+
+                    <div> <span class="bi bi-calendar"></span> <span> Start Date:10 Sep 2025</span> </div>
+
+                    <div> <span class="bi bi-person"></span> <span> By : Mr. Hari </span> </div>
+
+                    <div> <span class="bi bi-clock"></span> <span> 6 Months</span> </div>
+
+                </div>
+
+            </div>
+
+            <div class="card-footer">
+
+                <div class="btn-enroll">Enroll</div>
+
+                <div class="btn-share"> <span class="bi bi-share"></span> Share</div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="card-header">
+
+                <img src="./images/html.png" class="card-img">
+
+            </div>
+
+            <div class="card-body">
+
+                <div class="card-title">HTML & JS</div>
+
+                <div class="rating">
+
+                    <span class="bi bi-star-fill"></span>
+
+                    <span class="bi bi-star-fill"></span>
+
+                    <span class="bi bi-star-fill"></span>
+
+                    <span class="bi bi-star-fill"></span>
+
+                    <span class="bi bi-star-half"></span>
+
+                    <span>4.5</span>
+
+                </div>
+
+                <div class="course-details">
+
+                    <div> <span class="bi bi-calendar"></span> <span> Start Date:10 Sep 2025</span> </div>
+
+                    <div> <span class="bi bi-person"></span> <span> By : Mr. Hari </span> </div>
+
+                    <div> <span class="bi bi-clock"></span> <span> 6 Months</span> </div>
+
+                </div>
+
+            </div>
+
+            <div class="card-footer">
+
+                <div class="btn-enroll">Enroll</div>
+
+                <div class="btn-share"> <span class="bi bi-share"></span> Share</div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="card-header">
+
+                <img src="./images/dotnet.png" class="card-img">
+
+            </div>
+
+            <div class="card-body">
+
+                <div class="card-title">Fullstack .NET</div>
+
+                <div class="rating">
+
+                    <span class="bi bi-star-fill"></span>
+
+                    <span class="bi bi-star-fill"></span>
+
+                    <span class="bi bi-star-fill"></span>
+
+                    <span class="bi bi-star-fill"></span>
+
+                    <span class="bi bi-star-half"></span>
+
+                    <span>4.5</span>
+
+                </div>
+
+                <div class="course-details">
+
+                    <div> <span class="bi bi-calendar"></span> <span> Start Date:10 Sep 2025</span> </div>
+
+                    <div> <span class="bi bi-person"></span> <span> By : Mr. Hari </span> </div>
+
+                    <div> <span class="bi bi-clock"></span> <span> 6 Months</span> </div>
+
+                </div>
+
+            </div>
+
+            <div class="card-footer">
+
+                <div class="btn-enroll">Enroll</div>
+
+                <div class="btn-share"> <span class="bi bi-share"></span> Share</div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="card-header">
+
+                <img src="./images/react.png" class="card-img">
+
+            </div>
+
+            <div class="card-body">
+
+                <div class="card-title">React JS</div>
+
+                <div class="rating">
+
+                    <span class="bi bi-star-fill"></span>
+
+                    <span class="bi bi-star-fill"></span>
+
+                    <span class="bi bi-star-fill"></span>
+
+                    <span class="bi bi-star-fill"></span>
+
+                    <span class="bi bi-star-half"></span>
+
+                    <span>4.5</span>
+
+                </div>
+
+                <div class="course-details">
+
+                    <div> <span class="bi bi-calendar"></span> <span> Start Date:10 Sep 2025</span> </div>
+
+                    <div> <span class="bi bi-person"></span> <span> By : Mr. Hari </span> </div>
+
+                    <div> <span class="bi bi-clock"></span> <span> 6 Months</span> </div>
+
+                </div>
+
+            </div>
+
+            <div class="card-footer">
+
+                <div class="btn-enroll">Enroll</div>
+
+                <div class="btn-share"> <span class="bi bi-share"></span> Share</div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
+
+
+
+Ex: Amazon Cards
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Amazon</title>
+
+    <style>
+
+        section {
+
+            display: grid;
+
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+
+            margin-top: -300px;
+
+        }
+
+        .card {
+
+            background-color: white;
+
+            margin: 5px;
+
+            height: 400px;
+
+        }
+
+        .card-header {
+
+            height: 50px;
+
+            padding: 10px;
+
+        }
+
+        .card-title {
+
+            font-family: Arial;
+
+            font-weight: bold;
+
+            font-size: 22px;
+
+        }
+
+        .card-body {
+
+            padding: 5px;
+
+        }
+
+        .row {
+
+            display: grid;
+
+            grid-template-columns: 6fr 6fr;
+
+            column-gap: 5px;
+
+            margin-bottom: 5px;
+
+            font-family: Arial;
+
+            font-size: 12px;
+
+        }
+
+        .card-img {
+
+            width: 100%;
+
+        }
+
+        .card-footer {
+
+            color:blue;
+
+            text-align: center;
+
+            font-family: Arial;
+
+            padding: 10px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <img src="./images/amazon-banner.jpg" width="100%">
+
+    </header>
+
+    <section>
+
+        <div class="card">
+
+            <div class="card-header">
+
+                <div class="card-title">Revamp your home in style</div>
+
+            </div>
+
+            <div class="card-body">
+
+                <div class="row">
+
+                    <div>
+
+                        <img src="./images/a1.jpg" class="card-img">
+
+                        <p>Cushon Covers</p>
+
+                    </div>
+
+                    <div>
+
+                        <img src="./images/a2.jpg" class="card-img">
+
+                        <p>Cushon Covers</p>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div>
+
+                        <img src="./images/a3.jpg" class="card-img">
+
+                        <p>Cushon Covers</p>
+
+                    </div>
+
+                    <div>
+
+                        <img src="./images/a4.jpg" class="card-img">
+
+                        <p>Cushon Covers</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card-footer">
+
+                <div class="footer-title">See more</div>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-header">
+
+                <div class="card-title">Revamp your home in style</div>
+
+            </div>
+
+            <div class="card-body">
+
+                <div class="row">
+
+                    <div>
+
+                        <img src="./images/a5.jpg" class="card-img">
+
+                        <p>Cushon Covers</p>
+
+                    </div>
+
+                    <div>
+
+                        <img src="./images/a6.jpg" class="card-img">
+
+                        <p>Cushon Covers</p>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div>
+
+                        <img src="./images/a7.jpg" class="card-img">
+
+                        <p>Cushon Covers</p>
+
+                    </div>
+
+                    <div>
+
+                        <img src="./images/a8.jpg" class="card-img">
+
+                        <p>Cushon Covers</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card-footer">
+
+                <div class="footer-title">See more</div>
+
+            </div>
+
+        </div>
+
+         <div class="card">
+
+            <div class="card-header">
+
+                <div class="card-title">Revamp your home in style</div>
+
+            </div>
+
+            <div class="card-body">
+
+                <div class="row">
+
+                    <div>
+
+                        <img src="./images/a9.jpg" class="card-img">
+
+                        <p>Cushon Covers</p>
+
+                    </div>
+
+                    <div>
+
+                        <img src="./images/a10.jpg" class="card-img">
+
+                        <p>Cushon Covers</p>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div>
+
+                        <img src="./images/a11.jpg" class="card-img">
+
+                        <p>Cushon Covers</p>
+
+                    </div>
+
+                    <div>
+
+                        <img src="./images/a12.jpg" class="card-img">
+
+                        <p>Cushon Covers</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card-footer">
+
+                <div class="footer-title">See more</div>
+
+            </div>
+
+        </div>
+
+         <div class="card">
+
+            <div class="card-header">
+
+                <div class="card-title">Revamp your home in style</div>
+
+            </div>
+
+            <div class="card-body">
+
+                <div class="row">
+
+                    <div>
+
+                        <img src="./images/a1.jpg" class="card-img">
+
+                        <p>Cushon Covers</p>
+
+                    </div>
+
+                    <div>
+
+                        <img src="./images/a2.jpg" class="card-img">
+
+                        <p>Cushon Covers</p>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div>
+
+                        <img src="./images/a3.jpg" class="card-img">
+
+                        <p>Cushon Covers</p>
+
+                    </div>
+
+                    <div>
+
+                        <img src="./images/a4.jpg" class="card-img">
+
+                        <p>Cushon Covers</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card-footer">
+
+                <div class="footer-title">See more</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

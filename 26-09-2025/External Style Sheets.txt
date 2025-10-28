@@ -1,0 +1,185 @@
+1. Inline
+
+2. Embedded 
+
+
+
+External Style Sheet
+
+   - You can configure styles in a separate style sheet. 
+
+   - So that you can link to any HTML page. 
+
+   - You can access styles across pages.
+
+   - It easy to reuse, separate and extend styles.
+
+   - Stylesheets are configured with extension “.css”.
+
+   - Using a stylesheet will increase the number of requests to page and also page load time.
+
+
+
+Syntax:
+
+   1. src/styles/home.css
+
+
+
+           h1 {
+
+               color: red;
+
+           }
+
+
+
+   2. home.html
+
+
+
+        <link rel=“stylesheet” href=“../src/styles/home.css”>
+
+
+
+FAQ’s:    
+
+   1. Can we configure multiple stylesheet for a HTML page?
+
+   A. Yes
+
+
+
+   2. If styles are defined using all 3 techniques the which set will apply?
+
+   A. If different style attributes are given then all will apply.
+
+       If same style attribute is defined, then it uses the priority            
+
+           1st    priority            inline
+
+           2nd  priority            the latest, either embedded or external file.
+
+
+
+Minification of Style Sheets 
+
+   - It is a coding technique followed by developers to reduce the size of code file. 
+
+   - It is the process of removing unnecessary line breaks, optional code snippets,
+
+     using short hand technique of writing styles etc.
+
+
+
+                     {
+
+                        margin-left : 20px;
+
+                        margin-right: 20px;                => un compressed / un-minified 
+
+                        margin-top: 30px;
+
+                        margin-bottom: 30px;
+
+                      }
+
+
+
+                     {
+
+                      margin: 30px 20px 30px 20px;   => compressed / minified 
+
+                     }
+
+                                  [top, right, bottom, left]
+
+
+
+       - The un-minified CSS files are used in “Development”.
+
+       - The minified CSS files are used in “Production”. [ Go Live ]
+
+
+
+                    name.css            // development code file
+
+                    name.min.css    // production code file
+
+Ex:
+
+1. Copy your actual CSS code 
+
+2. Go to the website 
+
+           https://www.toptal.com/developers/cssminifier
+
+3. Paste your actual code => Click Minify => Copy the minified code
+
+4. Go to your project and add a new file
+
+           “home.min.css”
+
+5. Paste the minified code.
+
+6. Link the minified file.
+
+
+
+       <link rel=“stylesheet” href=“../src/styles/home.min.css”>
+
+
+
+Summary:
+
+   - Inline
+
+   - Embedded    
+
+   - External Style Sheet [ CSS - Cascade Style Sheet ]
+
+
+
+
+
+                                                       CSS Selectors
+
+
+
+   - A selector is used for embedded and external styles.
+
+   - Selector is required to select any HTML element in page in order to apply styles.
+
+
+
+                   selector
+
+                   {
+
+                     color: red;
+
+                     text-align: center;
+
+                   }
+
+
+
+   - CSS provides various type of selectors 
+
+
+
+           1. Primary Selectors
+
+           2. Relational Selectors 
+
+           3. Structural Selectors
+
+           4. Attribute Selectors
+
+           5. Dynamic Pseudo classes
+
+           6. Root Selector
+
+           7. Language Selector 
+
+           etc..

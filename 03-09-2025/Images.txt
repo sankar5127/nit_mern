@@ -1,0 +1,199 @@
+Images in HTML
+
+   - Images are of various types.
+
+   - Web will not support all images types.
+
+   - The recommended image types for web are shown below.
+
+
+
+   Type                                                                           MIME                           Extension
+
+
+
+   APNG    [ Animated Portable Network Graphics ]      image/apng                  .apng
+
+
+
+   PNG        [ Portable Network Graphics ]                      image/png                    .png
+
+ 
+
+   JPEG    [ Joint Photographic Expert Group ]             image/jpeg                   .jpg, .jpeg, .jfif
+
+
+
+   GIF        [ Graphic Interchange Format ]                    image/gif                      .gif
+
+
+
+   AVIF        [ AV1 Image Format ]                                       image/avif                  .avif, .heif
+
+
+
+   BMP        [ Bitmap ]                                                       image/bmp                 .bmp
+
+
+
+     TIFF        [ Tagged Image File Format ]                       image/tiff                    .tiff
+
+
+
+    SVG        [ Scalar Vector Graphics ]                            application/xml           .xml
+
+
+
+    ICON    [ Microsoft ICON ]                                          image/icon                 .ico
+
+
+
+    Webp   [ Web Picture ]                                              application/webp        .webp
+
+
+
+FAQ: What is MIME ?
+
+Ans:   MIME refers to “Multipurpose Internet Mail Extension”.
+
+         A MIME type is used to identify the content type in a file.
+
+         One MIME type can have multiple extensions.
+
+Ex:
+
+           application/msword [ MIME ]    =>  .doc, .docx, .rtf, .txt etc.
+
+
+
+PNG & APNG
+
+   - Have high resolution and definition. 
+
+   - Have more pixels depth. 
+
+    - Occupy more memory.
+
+    - Will take more time to render. 
+
+    - Good for downloadable images.    - Not good for on screen presentation.
+
+   - “APNG” can be animated.
+
+
+
+JPEG / JPG
+
+   - High resolution and definition.
+
+   - Less pixel depth when compared to PNG.
+
+   - It is compressed image format.
+
+   - It occupies less memory.
+
+   - Faster in rendering. 
+
+   - Good for on screen presentation. 
+
+
+
+AVIF
+
+   - High resolution and definition.
+
+   - Same like JPG
+
+   - More compressed than JPG.
+
+   - Less memory than JPG.
+
+   - Good for on screen presentation.
+
+   - Have dependency issues. 
+
+   - All browsers can’t identify the high efficiency images. [ AVIF ]
+
+
+
+GIF
+
+   - Low resolution.
+
+   - Less pixel depth
+
+   - Size is same not light weight.
+
+   - Less colors [ only 256 colors ]
+
+   - Can be animated. 
+
+   - Easy to transfer in a network. 
+
+   - Mostly used for bullets, lines, background patterns, buttons etc.
+
+
+
+TIFF 
+
+   - It high resolution and definition.
+
+   - More pixel depth
+
+   - But slice image format. 
+
+   - Loading is slow.
+
+   - Heavy on pages.
+
+   - Load slice by slice. 
+
+   - Good for scanned documents.
+
+
+
+BMP
+
+   - Bitmap
+
+   - Binary Image Format
+
+   - Image is save in binary format “011010101”
+
+   - Good for storing in any database system.
+
+   - It requires “parsing” COM to marshal. [Common Object Model]
+
+   - COM marshalling is the process of converting object to binary & vice versa. 
+
+
+
+SVG
+
+   - Scalar Vector Graphics.
+
+   - It is not pixel based image.
+
+   - It is XML image.
+
+   - High resolution and definition than PNG.
+
+   - Uses more memory.
+
+   - Mostly used for architectural diagrams, maps, icons etc.
+
+
+
+Webp
+
+   - Web picture 
+
+   - It is embedded into page.
+
+   - It is same like JPG.
+
+   - You can’t separate from page.
+
+   - It is good for images with copyrights. 
+
+   - Secured images.

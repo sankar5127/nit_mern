@@ -1,0 +1,233 @@
+<title>
+
+<link>
+
+<meta>
+
+
+
+Body Section:
+
+ - The contents in body section are loaded as a result of round-trip. 
+
+ - <body> element configures the body section with following attributes 
+
+   
+
+   1. bgcolor        : It sets a background color.
+
+   2. text                : It sets color for text in body. 
+
+
+
+   Note: HTML colors can be configured using 3 techniques
+
+               a) Color Name
+
+               b) Shade Name
+
+               c) Hexadecimal Value
+
+
+
+             <body  bgcolor=“yellow”>
+
+             <body  bgcolor=“lightyellow”>     
+
+             Hexadecimal Color Code
+
+              a) 3 Chars code starting with “#”
+
+               b) 6 Chars code starting with “#”
+
+
+
+               #RGB                        R-Red, G-Green, B-Blue
+
+               #RRGGBB
+
+   
+
+               Every color value will range from “0 to f”.
+
+
+
+               0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f
+
+
+
+               #00f            Blue
+
+               #0f0            Green
+
+               #f00            Red
+
+               #000        Black
+
+               #fff            White
+
+
+
+               #00ff00    Green
+
+               #0000ff    Blue
+
+               #0000aa    Dark Blue
+
+
+
+               bgcolor=“red”   vs  bgcolor=“#f00”       => name is good 
+
+               bgcolor=“white” vs bgcolor=“#fff”         => code is good
+
+
+
+   Syntax:
+
+               <body bgcolor=“#000”  text=“white”>
+
+
+
+           Note: HTML attributes doesn’t have any order dependency. 
+
+
+
+  3. background        : It sets a background image for body.    
+
+   Note: It is always recommended to use only virtual path for resources in a web application.
+
+             Never use the physical path. [ D:\images\pic.jpg ]
+
+
+
+   CSS Background Attributes:
+
+   
+
+       background-size            : cover, contain, width&height in pixels 
+
+       background-repeat        : repeat, no-repeat, repeat-x, repeat-y 
+
+       background-position        : left, center, right, top, bottom, position in pixels X & Y axis. 
+
+       background-attachment: fixed, scroll 
+
+       background-color            : sets a color
+
+       background-image        : It uses “url()” for background image. 
+
+
+
+   Note: Styles can be configured using various techniques like
+
+               a) Inline
+
+               b) Embedded 
+
+               c) External File
+
+             - Embedded styles allows to configure styles inside page by using a <style> 
+
+             container.
+
+             - Styles are defined as CSSOM. [Cascading Stylesheet Object Model]
+
+             - Object is a key and value collection enclosed in “{  }” block.
+
+
+
+                       element
+
+                       {
+
+                         key1: value1;
+
+                         key2: value1;
+
+                       }
+
+Ex:
+
+       <head>
+
+           <style>
+
+               body 
+
+               {
+
+                 background-size : 200px 200px;
+
+                 background-repeat: no-repeat;
+
+                 background-position: center center;
+
+                 background-attachment: fixed;
+
+               }
+
+           </style>
+
+      </head>
+
+     <body background=“./public/images/banner.jpg”>
+
+     </body>
+
+
+
+   4. alink            : It sets color for active links in page.
+
+   5. vlink            : It sets color for visited links in page.
+
+
+
+Syntax:
+
+       <body  alink=“red”  vlink=“gray”>
+
+       
+
+               <a href=“https://www.amazon.in”> Amazon </a>
+
+
+
+       </body>
+
+
+
+   6. align            : It sets alignment for content in body. The values can be left, center, right or
+
+                             justify.     
+
+
+
+Syntax:
+
+       <body align=“left | center | right | justify”>
+
+       </body>
+
+
+
+   7. leftmargin                ]
+
+   8. rightmargin                ]  sets margin in specified direction.
+
+   9. topmargin                ]
+
+   10. bottommargin        ]
+
+
+
+Syntax:
+
+   <body leftmargin=“100” rightmargin=“100” topmargin=“50” bottommargin=“50” align=“justify”>
+
+   
+
+           …. your content ….
+
+
+
+   </body>

@@ -1,0 +1,213 @@
+TextBox
+
+   - It is used to handle a string.
+
+   - String is a literal with group of chars, which include alphabet, number and special chars.
+
+   - String returns a value enclosed in quotes “double” or ‘single’. 
+
+   - HTML <input> element can input various types of components.
+
+   - Input provides a “type” attribute that defines the component type.
+
+   
+
+   Syntax:
+
+               <input type=“text”>         for string data type.
+
+
+
+   Attributes:
+
+   1. Id                ]
+
+   2. Name        ] used for reference is html, css and JavaScript
+
+   3. Class        ]
+
+
+
+   Note: It is mandatory to have “name” attribute for every element.
+
+            If name is not defined then form can’t submit the data. 
+
+
+
+                   Syntax:  
+
+                   <input type=“text” name=“UserName”>
+
+
+
+   4. Value            : It defines the default value to display inside textbox. 
+
+
+
+   5. Readonly    : It will not allow to modify the value but allows to submit the value.
+
+
+
+   6. Disabled    : It will not allow to modify and submit. 
+
+
+
+                   Syntax:
+
+                   <input type=“text” name=“UserName” value=“John”  readonly | disabled>
+
+
+
+   7. Placeholder: It used to display watermark text for textbox. 
+
+                           It is displayed only when value is not defined. 
+
+
+
+                   Syntax:
+
+                   <input type=“text” name=“UserName” placeholder=“Name in block letters”>
+
+
+
+   8. Size            : It sets width for textbox. The default is 20. 
+
+                         It is not limit for textbox. 
+
+
+
+   9. Minlength    : It is validation for minimum number of chars.
+
+
+
+   10. Maxlength : It is restriction for maximum number of chars.
+
+
+
+                   Syntax:
+
+                   <input type=“text” name=“UserName” minlength=“4” maxlength=“10”>
+
+   
+
+                   - A validation message is displayed when you submit less than 4 chars.
+
+                   - You are not allowed to enter more than 10 chars. It stops at 10.
+
+
+
+     11. Required  : It used for mandatory fields. A value is required before submitting the form.
+
+                           It can’t be empty. 
+
+
+
+                   Syntax:
+
+                   <input type=“text” name=“UserName” required>
+
+
+
+     12. Autofocus : It sets focus to element automatically on page load. 
+
+
+
+                   Syntax:
+
+                   <input type=“text” name=“UserName” autofocus>
+
+
+
+     13. List        : It is used to configure a datalist with textbox. 
+
+                         Datalist is used as autocomplete text for textbox. 
+
+                         Datalist is defined using the elements:
+
+                               a) <datalist>
+
+                               b) <option>
+
+   
+
+       Syntax:
+
+               <input type=“text” name=“search” list=“topics”>
+
+               <datalist id=“topics”>
+
+                   <option> Topic-1 </option>
+
+                   <option> Topic-2 </option>
+
+               </datalist>
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <form align="center">
+
+        <h1>Google</h1>
+
+        <input type="text" name="SearchBar" size="40" list="topics">
+
+        <datalist id="topics">
+
+            <option>JavaScript Projects</option>
+
+            <option>CSS Examples</option>
+
+            <option>HTML Projects</option>
+
+            <option>HTML Templates</option>
+
+            <option>CSS Projects</option>
+
+        </datalist>
+
+        <br><br>
+
+        <button>Search</button>
+
+    </form>
+
+</body>
+
+</html>
+
+
+
+       14. Pattern        : It is a validation attribute used to compare your value with a regular
+
+                                 expression. 
+
+                                 Regular expression is used to verify the format of input value.
+
+                                 It is built by using:
+
+                                   a) Meta Characters
+
+                                   b) Quantifiers 
+
+
+
+       Syntax:
+
+                       <input type=“text” name=“UserName” pattern=“RegExp”>

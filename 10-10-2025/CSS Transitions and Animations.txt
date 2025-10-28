@@ -1,0 +1,505 @@
+2D Transforms
+
+- translate()
+
+- scale()
+
+- skew()
+
+- rotate()
+
+
+
+matrix()
+
+   - It is a short hand for multiple transforms.
+
+
+
+Syntax:
+
+       matrix(scaleX(), skewX(), skewY(), scaleY(), translateX(), translateY());
+
+
+
+       scaleX,Y            1=100%
+
+       skewX,Y            0.1=10deg
+
+       translateX,Y        100=100px
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        body {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 100vh;
+
+        }
+
+       img {
+
+        width: 100px;
+
+        height: 100px;
+
+        transform: matrix(1,0,0,1,0,0);
+
+        transition: 1s;
+
+       }
+
+       img:hover {
+
+        transform: matrix(2,0.5,0,2,200,0);
+
+        transition: 5s;
+
+       }
+
+    </style>
+
+</head>
+
+<body>
+
+        <img src="./images/women-fashion.jpg">
+
+</body>
+
+</html>
+
+
+
+3D Transforms
+
+   - 3D refers to three dimensions. 
+
+   - It is along X, Y & Z axis. 
+
+   - CSS 3D methods
+
+
+
+       a) translate3D()
+
+       b) scale3D()
+
+       c) skew3D()
+
+       d) rotate3D()
+
+
+
+Syntax:
+
+       img {
+
+           transform: scale3d(3,3,6);
+
+       }
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        body {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 100vh;
+
+        }
+
+       img {
+
+        width: 100px;
+
+        height: 100px;
+
+        transform:scale3d(1,1,1);
+
+        transition: 1s;
+
+       }
+
+       img:hover {
+
+        transform: scale3d(3,3,4);
+
+        transition: 5s;
+
+        box-shadow: 10px 10px 2px black;
+
+       }
+
+    </style>
+
+</head>
+
+<body>
+
+        <img src="./images/women-fashion.jpg">
+
+</body>
+
+</html>
+
+
+
+CSS Transitions
+
+       
+
+       transition                            It is short hand for transition.
+
+       transition-delay                    It delays the start of transition by specific duration.
+
+       transition-duration                It defines the time taken to transform.
+
+       transition-property                It defines the properties that should use given timings. 
+
+       transition-timing-function    It configures pre-defined transition effects.
+
+                                               [ease-in, ease-out, steps, linear, .. ]
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+       div {
+
+        width: 50px;
+
+        height: 50px;
+
+        background-color: red;
+
+        transition-duration: 2s;
+
+        transition-delay: 1s;
+
+        transition-timing-function: steps(4);
+
+       }
+
+       div:hover {
+
+         width: 1200px;
+
+         background-color: green;
+
+         transition-duration: 5s;
+
+         transition-delay: 1s;
+
+         transition-property: width;
+
+         transition-timing-function: steps(20);
+
+       }
+
+    </style>
+
+</head>
+
+<body>
+
+  <div></div>
+
+</body>
+
+</html>
+
+
+
+CSS Keyframes & Animations
+
+       - Keyframe is defined with element transformation. 
+
+       - Several keyframes are required to create a custom transformation. 
+
+       - Keyframes are configured with initial state, final state and break point. 
+
+       - All together can make a good transformation. 
+
+
+
+Syntax:
+
+        @keyframes  Name
+
+         {
+
+            from {
+
+                   // initial state effects
+
+            }
+
+            50% { 
+
+                   // break point
+
+            }
+
+           to {
+
+               // final state effects
+
+             }
+
+         }
+
+
+
+   - Keyframes are applied to any element by using CSS animation attributes
+
+   
+
+           a) animation-name
+
+           b) animation-duration
+
+           c) animation-timing-function 
+
+           d) animation-iteration-count 
+
+           e) animation-direction 
+
+           f) animation-delay
+
+
+
+Syntax:
+
+           element {
+
+                   animation-name: keyFrameName;
+
+                   animation-duration: interval;
+
+               }
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+        @keyframes Blink {
+
+            from {
+
+                opacity: 0;
+
+                transform: rotate(0deg) scale(1);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: rotate(360deg) scale(4);
+
+            }
+
+        }
+
+
+
+        body {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 100vh;
+
+            background-color: black;
+
+        }
+
+        .bi-star-fill {
+
+            font-size: 40px;
+
+            color:white;
+
+            animation-name: Blink;
+
+            animation-duration: 500ms;
+
+            animation-iteration-count: infinite;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="bi bi-star-fill"></div>
+
+</body>
+
+</html>
+
+
+
+
+
+https://cssloaders.github.io/
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+        @keyframes Spin {
+
+            1% {
+
+                transform: rotate(0deg);
+
+            }
+
+            100% {
+
+                transform: rotate(360deg);
+
+            }
+
+        }
+
+        body {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 100vh;
+
+            background-color: black;
+
+        }
+
+        div {
+
+            width: 100px;
+
+            height: 100px;
+
+            border-left: 20px solid white;
+
+            border-right: 20px solid white;
+
+            border-top: 20px solid white;
+
+            border-bottom: 20px solid transparent;
+
+            border-radius: 100%;
+
+            animation-name: Spin;
+
+            animation-duration: 1s;
+
+            animation-iteration-count: infinite;
+
+            animation-timing-function: linear;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div></div>
+
+</body>
+
+</html>

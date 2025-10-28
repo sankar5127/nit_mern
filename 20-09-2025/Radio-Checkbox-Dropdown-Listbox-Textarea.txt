@@ -1,0 +1,479 @@
+Form Elements
+
+- Textbox
+
+- Password
+
+- Number
+
+- Range
+
+- Date & Time
+
+- Color
+
+- Email
+
+- URL
+
+- File
+
+
+
+Radio Button
+
+   - Radio allows to select one or multiple, however it will not allow to deselect. 
+
+   - Hence radio is used with “Mutex” mechanism, which is “Mutual Exclusion”. 
+
+   - Mutex can be configured by specifying same name for all radios in a category.
+
+   
+
+Syntax:
+
+       <input type=“radio” name=“gender”> Male
+
+       <input type=“radio” name=“gender”> Female 
+
+
+
+   - Radio’s can’t display any text as caption. 
+
+   - You have to set caption by using <label> element. 
+
+   - Label uses “for” attribute, which is a data binding attribute. 
+
+   - You can connect label with any element.
+
+
+
+Syntax:
+
+       <input type=“radio” name=“gender”> <label for=“gender”> Male </label>
+
+
+
+   - Radio’s submit “on” as default value, hence it is recommended to define a value for
+
+     every radio. 
+
+
+
+Syntax:
+
+     <input type=“radio” name=“gender” value=“Male”>  <label for=“gender”> Male </label>
+
+
+
+   - You can keep any radio selected by using “checked” attribute.
+
+
+
+Syntax:
+
+    <input type=“radio” name=“gender” value=“Male” checked>  
+
+   
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <form>
+
+       <div>
+
+          <input type="radio" value="Male" checked name="gender"> <label for="gender">Male</label>
+
+          <input type="radio" value="Female"  name="gender"> <label for="gender">Female</label>
+
+       </div>
+
+       <button>Submit</button>
+
+    </form>
+
+</body>
+
+</html>
+
+
+
+Checkbox
+
+   - It allows to check and uncheck any option.
+
+   - You can use for selection of one or multiple from a group of choices.
+
+
+
+Syntax:
+
+       <input type=“checkbox” name=“course” value=“UI” checked> 
+
+       <label for=“course”> UI </label>
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <form>
+
+       <div>
+
+          <input type="checkbox" name="course" value="UI"> <label for="course">UI</label>
+
+          <br>
+
+          <input type="checkbox" name="course" value="Java"> <label for="course">Java</label>
+
+          <br>
+
+          <input type="checkbox" name="course" value="Oracle"> <label for="course">Oracle</label>
+
+          
+
+       </div>
+
+       <button>Submit</button>
+
+    </form>
+
+</body>
+
+</html>
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        .user {
+
+            outline: none;
+
+            border-left: none;
+
+            border-right: none;
+
+            border-top: none;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <form>
+
+        <div>
+
+            <input type="text" placeholder="User Name" class="user">
+
+        </div>
+
+       <div>
+
+          <input type="checkbox"  name="course" value="UI"> <label for="course">UI</label>
+
+          <br>
+
+          <input type="checkbox" name="course" value="Java"> <label for="course">Java</label>
+
+          <br>
+
+          <input type="checkbox" name="course" value="Oracle"> <label for="course">Oracle</label>
+
+          
+
+       </div>
+
+       <button>Submit</button>
+
+    </form>
+
+</body>
+
+</html>
+
+
+
+
+
+Dropdown List
+
+   - It enables the user to select any one option from a group of choices. 
+
+   - It can dropdown a list using <option> element. 
+
+   
+
+Syntax:
+
+       <select>
+
+            <option> Item-1 </option>
+
+            <option> Item-2 </option>
+
+       </select>
+
+
+
+   - Every option is RC type element. 
+
+   - It will not allow complex formats for text.
+
+   - Every option comprises of 3 attributes
+
+       a) value
+
+       b) selected
+
+       c) disabled
+
+   - “value” defines the value to submit.
+
+   - “selected” keeps the option selected every time on page load.
+
+   - “disabled” will not allow to select the option.
+
+
+
+Syntax:
+
+           <option value=“some” selected> Text </option>
+
+           <option value=“some” disabled> Text </option>
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+      
+
+    </style>
+
+</head>
+
+<body>
+
+    <form>
+
+        <div>
+
+            <label>Select Airport</label>
+
+            <div>
+
+                
+
+                <select name="City">
+
+                    <option>Choose City Airport</option>
+
+                    <option selected>Delhi</option>
+
+                    <option disabled value="RGI">Hyd</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <br><br>
+
+       <button>Submit</button>
+
+    </form>
+
+</body>
+
+</html>
+
+
+
+ListBox 
+
+   - You can convert a dropdown into list box by using “size” attribute.
+
+   - You can also enable selection of multiple options by using “multiple” attribute.
+
+
+
+Syntax:
+
+   <select size=“3” multiple>
+
+       <option> 1 </option>
+
+       <option> 2 </option>
+
+   </select>
+
+
+
+Note: You can’t have nested dropdown or listbox.
+
+
+
+Textarea
+
+   - It is used to define a multiline textbox.
+
+   - It is RC type and can be used only for plain text content. 
+
+   - You can control the size by using 
+
+       a) rows
+
+       b) cols
+
+
+
+Syntax:
+
+       <textarea rows=“4” cols=“40”> </textarea> 
+
+
+
+       C:\> mode 
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+      
+
+    </style>
+
+</head>
+
+<body>
+
+    <form>
+
+       <div>
+
+          <label>Your Name</label>
+
+          <div>
+
+            <input type="text">
+
+          </div>
+
+       </div>
+
+       <div>
+
+          <label>Your Comments</label>
+
+          <div>
+
+             <textarea rows="4" cols="40"></textarea>
+
+          </div>
+
+       </div>
+
+       <div>
+
+          <label>Terms of Service</label>
+
+          <div>
+
+             <textarea disabled rows="4" cols="40"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe impedit quae quia illum placeat tenetur omnis quibusdam magni obcaecati ipsa expedita molestiae nihil ex esse error, asperiores incidunt pariatur consectetur! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam nisi, repellendus illo illum fuga eveniet beatae doloribus cupiditate molestias corrupti? Qui cumque unde saepe harum ea ullam, autem placeat aut! </textarea>
+
+          </div>
+
+       </div>
+
+       <br><br>
+
+       <button>Submit</button>
+
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,659 @@
+1. <font>
+
+
+
+
+
+2. Font styles and effects
+
+
+
+       <b>                        bold
+
+       <strong>            strong, similar to bold
+
+       <i>                        italic
+
+       <em>                    emphasized, similar to italic 
+
+       <u>                        underline
+
+       <ins>                    inserted, similar to underline        <strike>                strikeout
+
+       <del>                    deleted, similar to strikeout
+
+       <sup>                    super script
+
+       <sub>                    sub script 
+
+
+
+ FAQ: What is difference between <b> and <strong>?
+
+ Ans:  <b> is used to define bold expression is design. 
+
+          <strong> is used to define bold expression review. 
+
+
+
+  Note:  A document is designed and reviewed. 
+
+            Review mode uses different elements to highlight or express any content. 
+
+            The review elements are: <strong> <em> <del> <ins> 
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+      
+
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+
+        The font style <b>Bold</b> is same as <strong>Strong.</strong>
+
+    </div>
+
+    <div>
+
+        The font style <i>Italics</i> is same as <em>Emphasized.</em>
+
+    </div>
+
+    <div>
+
+        The font effect <u>Underline</u> is same as <ins>Inserted.</ins>
+
+    </div>
+
+    <div>
+
+        The font effect <strike>Strikeout</strike> is same as <del>Deleted.</del>
+
+    </div>
+
+    <div>
+
+        5<sup>th</sup> Anniversary, H<sub>2</sub>O
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+
+HTML Lists
+
+
+
+1. Datalist with terms and definitions
+
+
+
+       <dl>            data list
+
+       <dt>            data term
+
+       <dd>        data definition
+
+
+
+Syntax:
+
+       <dl>
+
+            <dt> Term </dt>
+
+            <dd> Definition </dd>
+
+            …
+
+            …
+
+       </dl>
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+       dt {
+
+          font-weight: bold;
+
+          background-color: black;
+
+          color:white;
+
+          padding: 5px;
+
+          margin-bottom: 5px;
+
+       }
+
+       dd {
+
+          background-color: lightgray;
+
+          padding: 5px;
+
+          margin-bottom: 5px;
+
+       }
+
+       dl {
+
+        width: 500px;
+
+       }
+
+    </style>
+
+</head>
+
+<body>
+
+  <dl>
+
+    <dt>  HTML </dt>
+
+    <dd> It is a markup language.  </dd>
+
+    <dd> It is used for presentation. </dd>
+
+    <dt> CSS  </dt>
+
+    <dt> Styles </dt>
+
+    <dd> It configures styles. </dd>
+
+    <dt> JavaScript </dt>
+
+    <dd>It manipulates DOM.</dd>
+
+  </dl>
+
+</body>
+
+</html>
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+       dt {
+
+          font-weight: bold;
+
+          background-color: black;
+
+          color:white;
+
+          padding: 5px;
+
+          margin-bottom: 5px;
+
+       }
+
+       dd {
+
+          background-color: lightgray;
+
+          padding: 5px;
+
+          margin-bottom: 5px;
+
+       }
+
+       dl {
+
+        width: 500px;
+
+        display: grid;
+
+        grid-template-columns: 6fr 6fr;
+
+       }
+
+    </style>
+
+</head>
+
+<body>
+
+  <dl>
+
+     <dt>User Name</dt>
+
+     <dd><input></dd>
+
+     <dt>Password</dt>
+
+     <dd><input></dd>
+
+     <dt>Email</dt>
+
+     <dd><input></dd>
+
+     <dt>Mobile</dt>
+
+     <dd><input></dd>
+
+  </dl>
+
+</body>
+
+</html>
+
+
+
+CSS Sticky Position:
+
+   - CSS provides various position attributes        a) static
+
+       b) absolute
+
+       c) relative
+
+       d) fixed
+
+       e) sticky
+
+   - Sticky allows the to keep the element according to normal flow of document, but it sticks
+
+     at specific position top, right, bottom or left. So that it locks scrolling and allows to 
+
+     scroll other content in backdrop. 
+
+
+
+Syntax:
+
+        dt {
+
+             position : sticky;
+
+             top: 0px;
+
+         }
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+       dt {
+
+          font-weight: bold;
+
+          background-color: black;
+
+          color:white;
+
+          padding: 5px;
+
+          margin-bottom: 5px;
+
+          position: sticky;
+
+          top: 0px;
+
+       }
+
+       dd {
+
+          background-color: lightgray;
+
+          padding: 5px;
+
+          margin-bottom: 5px;
+
+       }
+
+       dl {
+
+        width: 200px;
+
+       }
+
+    </style>
+
+</head>
+
+<body>
+
+ <nav>
+
+  <h1>Amazon</h1>
+
+  <dl>
+
+    <dt>Electronics</dt>
+
+    <dd>Televisions</dd>
+
+    <dd>Mobiles</dd>
+
+    <dd>Watches</dd>
+
+    <dd>Televisions</dd>
+
+    <dd>Mobiles</dd>
+
+    <dd>Watches</dd>
+
+    <dd>Televisions</dd>
+
+    <dd>Mobiles</dd>
+
+    <dd>Watches</dd>
+
+    <dd>Televisions</dd>
+
+    <dd>Mobiles</dd>
+
+    <dd>Watches</dd>
+
+    <dd>Televisions</dd>
+
+    <dd>Mobiles</dd>
+
+    <dd>Watches</dd>
+
+    <dd>Televisions</dd>
+
+    <dd>Mobiles</dd>
+
+    <dd>Watches</dd>
+
+    <dd>Televisions</dd>
+
+    <dd>Mobiles</dd>
+
+    <dd>Watches</dd>
+
+    <dd>Televisions</dd>
+
+    <dd>Mobiles</dd>
+
+    <dd>Watches</dd>
+
+    <dd>Televisions</dd>
+
+    <dd>Mobiles</dd>
+
+    <dd>Watches</dd>
+
+    <dd>Televisions</dd>
+
+    <dd>Mobiles</dd>
+
+    <dd>Watches</dd>
+
+
+
+    <dt>Fashion</dt>
+
+    <dd>Women</dd>
+
+    <dd>Men</dd>
+
+    <dd>Kids</dd>
+
+    <dd>Women</dd>
+
+    <dd>Men</dd>
+
+    <dd>Kids</dd>
+
+    <dd>Women</dd>
+
+    <dd>Men</dd>
+
+    <dd>Kids</dd>
+
+    <dd>Women</dd>
+
+    <dd>Men</dd>
+
+    <dd>Kids</dd>
+
+    <dd>Women</dd>
+
+    <dd>Men</dd>
+
+    <dd>Kids</dd>
+
+    <dd>Women</dd>
+
+    <dd>Men</dd>
+
+    <dd>Kids</dd>
+
+    <dd>Women</dd>
+
+    <dd>Men</dd>
+
+    <dd>Kids</dd>
+
+    <dd>Women</dd>
+
+    <dd>Men</dd>
+
+    <dd>Kids</dd>
+
+    <dd>Women</dd>
+
+    <dd>Men</dd>
+
+    <dd>Kids</dd>
+
+    <dd>Women</dd>
+
+    <dd>Men</dd>
+
+    <dd>Kids</dd>
+
+    <dd>Women</dd>
+
+    <dd>Men</dd>
+
+    <dd>Kids</dd>
+
+    <dd>Women</dd>
+
+    <dd>Men</dd>
+
+    <dd>Kids</dd>
+
+    <dd>Women</dd>
+
+    <dd>Men</dd>
+
+    <dd>Kids</dd>
+
+
+
+  </dl>
+
+ </nav>
+
+</body>
+
+</html>
+
+
+
+2. Ordered List
+
+
+
+       <ol>            ordered list
+
+       <li>            list item
+
+
+
+   - It is auto numbering for a list of items.
+
+   - Numbering updates automatically when you add or remove item.
+
+
+
+Syntax:
+
+           <ol>    
+
+               <li> Item -1 </li>
+
+               <li> Item -2 </li>
+
+           </ol>
+
+
+
+    - You can set numbering style by using “type” attribute with “1, A, a, i, I”.
+
+    
+
+           <ol type=“a”>
+
+
+
+    - You can set start level, that defines from where the numbering has to start. 
+
+
+
+            <ol  type=“1” start=“101”>          start => is level number
+
+       
+
+            <ol type=“a” start=“5”> 
+
+
+
+     - You can reverse the numbering by using “reversed” attribute.
+
+
+
+             <ol type=“1” start=“2” reversed>
+
+
+
+     - You can create nested list, but make sure that the child list is inside <li> element.
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <ol>
+
+        <li>HTML
+
+            <ol type="a">
+
+            <li>Normal Elements
+
+                <ol type="i">
+
+                    <li>Bold</li>
+
+                </ol>
+
+            </li>
+
+            <li>Void Elements</li>
+
+            </ol>
+
+        </li>
+
+        
+
+        <li>JavaScript</li>
+
+    </ol>
+
+</body>
+
+</html>

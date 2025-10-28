@@ -1,0 +1,655 @@
+CSS Display
+
+
+
+CSS List Style
+
+   
+
+     list-style-type            disc, circle, lower-alpha, number etc.
+
+     list-style-position        inside, outside
+
+     list-style-image        sets a custom image as bullet. 
+
+     list-style                    short hand for all effects. 
+
+
+
+Syntax:
+
+     ol {
+
+           list-style-type : lower-alpha;
+
+           list-style-position: inside;
+
+       }
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        ol {
+
+            list-style-type: lower-alpha;
+
+            list-style-position: inside;
+
+        }
+
+        ol li {
+
+            border:1px solid black;
+
+            padding: 5px;
+
+            width: 100px;
+
+        }
+
+        ul {
+
+            list-style: none;
+
+            list-style-image: url("./images/bullet.jpg");
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+     <ol>
+
+        <li>Item-1</li>
+
+        <li>Item-2</li>
+
+        <li>Item-3</li>
+
+        <li>Item-4</li>
+
+        <li>Item-5</li>
+
+     </ol>
+
+     <ul>
+
+        <li>Item-1</li>
+
+        <li>Item-2</li>
+
+        <li>Item-3</li>
+
+        <li>Item-4</li>
+
+        <li>Item-5</li>
+
+     </ul>
+
+</body>
+
+</html>
+
+
+
+CSS Text Styles
+
+       
+
+       font-family            uses a font family name
+
+       font-size                sets size
+
+       font-weight            bold
+
+       font-style                italics 
+
+       font-variant            small-caps 
+
+       color                        text color 
+
+
+
+       text-transform        changes capitalization, uppercase, lower case, capitalize etc.
+
+       text-shadow            horizontal, vertical, blur and color.
+
+       text-align                alignment left, center, right or justify
+
+       text-decoration        underline, overline, line-through with size, style and color. 
+
+               text-decoration-line
+
+               text-decoration-style
+
+               text-decoration-color
+
+               text-decoration-thickness 
+
+       text-indent                it sets first line indent in a paragraph.
+
+       text-overflow            it can set the following text with ellipsis. 
+
+                                   To set overflow you need other attributes like word-wrap, white-space.
+
+       white-space            removes the wrapping by using “no wrap” 
+
+       overflow                It controls overflowing content with scroll, hidden & auto.
+
+
+
+ Syntax:
+
+       p {
+
+            border:1px solid black;
+
+            padding:5px;
+
+            white-space: nowrap;
+
+            overflow: hidden;
+
+            text-overflow: ellipsis;
+
+            width: 400px;
+
+         }
+
+
+
+       letter-spacing        sets space between letters
+
+       word-spacing        sets space between words
+
+       line-height                sets space between lines
+
+       word-break            breaks the lengthy words at right margin to justify content. 
+
+                                   [break-all]
+
+   
+
+Syntax:
+
+       p {
+
+            letter-spacing: 2px;
+
+            word-spacing: 20px;
+
+            line-height: 40px;
+
+            word-break: break-all;
+
+       }
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+       h1 {
+
+         text-transform: capitalize;
+
+         text-shadow: 2px 2px 5px gray;
+
+         color:red;
+
+         text-decoration: underline wavy 2px red;
+
+         text-decoration-line: underline;
+
+         text-decoration-style: double;
+
+         text-decoration-color: blue;
+
+         text-decoration-thickness: 4px;
+
+       }
+
+       p {
+
+        text-indent: 100px;
+
+        letter-spacing: 2px;
+
+        word-spacing: 15px;
+
+        line-height: 40px;
+
+        word-break: break-all;
+
+       }
+
+       .description {
+
+          border: 1px solid black;
+
+          padding: 5px;
+
+          width: 400px;
+
+          white-space: nowrap;
+
+          overflow: hidden;
+
+          text-overflow: ellipsis;
+
+       }
+
+    </style>
+
+</head>
+
+<body>
+
+     <h1>Welcome to styles</h1>
+
+     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis distinctio deserunt, dolor consequatur, laudantium provident hic perspiciatis quasi maxime, corporis qui molestias adipisci saepe ab delectus at blanditiis beatae amet? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dolor, nesciunt quos mollitia voluptates commodi maiores sunt? Nihil ut, eos, impedit natus modi nobis quisquam exercitationem aspernatur ducimus, fuga dolore?</p>
+
+     <div class="description" title="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo magnam aliquam veritatis? Saepe atque cumque odit nostrum ipsam accusantium deserunt nesciunt harum quidem. Quisquam accusamus natus beatae! Provident, doloribus minus.">
+
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo magnam aliquam veritatis? Saepe atque cumque odit nostrum ipsam accusantium deserunt nesciunt harum quidem. Quisquam accusamus natus beatae! Provident, doloribus minus.
+
+     </div>
+
+</body>
+
+</html>
+
+
+
+
+
+CSS Transforms
+
+   - Transform is the process of changing element from one state to another. 
+
+   - Transform includes changing position, size, orientation, skew etc.
+
+   - CSS can transform elements using various dimensions
+
+
+
+       1. 2D Transforms
+
+       2. 3D Transforms
+
+
+
+2D Transforms
+
+   - 2D refers to two-dimensions.
+
+   - Two dimensions include X & Y axis. 
+
+   - CSS 2D transform methods are
+
+
+
+       a) translate()
+
+       b) scale()
+
+       c) rotate()
+
+       d) skew()
+
+       e) matrix()
+
+
+
+Syntax:
+
+        {
+
+           transform : translate(), scale(), rotate(), skew(), matrix() ;
+
+       }
+
+
+
+   Note: Few browsers can’t handle transforms from CSS, hence transform is configured              using browser plugins like.
+
+           
+
+                   -webkit-transform
+
+                   -moz-transform
+
+                   -o-transform
+
+                   -ms-transform 
+
+
+
+           img {
+
+                   transform: scale();
+
+                   -webkit-transform: scale();
+
+                   -moz-transform: scale();
+
+                   -o-transform: scale();
+
+                   -ms-transform: scale();
+
+               }
+
+
+
+2D Transform Methods:
+
+
+
+Translate
+
+   a) translate()            : It is used to move any element along X and Y axis. 
+
+   b) translateX()        : It moves along X axis.
+
+   c) translateY()        : It moves along Y axis.
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        img {
+
+            transform: translate(0px, 0px);
+
+            transition: 2s;
+
+        }
+
+        img:hover {
+
+            transform: translate(400px, 100px);
+
+            transition: 5s;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <img src="./images/women-fashion.jpg" width="100" height="100">
+
+</body>
+
+</html>
+
+
+
+Scale
+
+       scale()            changes the width and height of element
+
+       scaleX()        changes the width.
+
+       scaleY()        changes the hight. 
+
+
+
+Syntax:
+
+       {
+
+           transform: scale(1);        1=100%, 1.5=150%, 0.5=50%
+
+       }
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        img {
+
+            transform: scale(1,1);
+
+            transition: 2s;
+
+        }
+
+        img:hover {
+
+            transform: scale(3,3);
+
+            transition: 5s;
+
+        }
+
+        body {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 100vh;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <img src="./images/women-fashion.jpg" width="100" height="100">
+
+</body>
+
+</html>
+
+
+
+Rotate
+
+       rotate()            rotate by specified deg.
+
+       rotateX()
+
+       rotateY()
+
+Syntax:
+
+       {
+
+         transform : rotate(180deg);
+
+       }
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        img {
+
+            transform: rotate(0deg);
+
+            transition: 2s;
+
+        }
+
+        img:hover {
+
+            transform: rotate(-360deg);
+
+            transition: 5s;
+
+        }
+
+        body {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 100vh;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <img src="./images/women-fashion.jpg" width="200" height="200">
+
+</body>
+
+</html>
+
+
+
+Skew
+
+       skew()            tilt element by specified deg. 
+
+       skewX()
+
+       skewY()
+
+Syntax:
+
+       {
+
+        transform : skewX(20deg);
+
+       }
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        img {
+
+            transform: skewY(0deg) scale(1) translate(0px,0px);
+
+            transition: 2s;
+
+        }
+
+        img:hover {
+
+            transform: skewY(-20deg) scale(2) translate(50px, 50px);
+
+            transition: 5s;
+
+        }
+
+        body {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 100vh;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <img src="./images/women-fashion.jpg" width="200" height="200">
+
+</body>
+
+</html>

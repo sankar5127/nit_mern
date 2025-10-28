@@ -1,0 +1,385 @@
+Note: “required” class can’t validate required. It defines effects only when required is 
+
+         specified for any element.
+
+
+
+        To verify the validation you have to implement “valid” class. 
+
+
+
+Syntax:
+
+           input: required {
+
+                                               => if required is defined for element
+
+           }
+
+           input : valid {
+
+                                               => if required is satisfied 
+
+           }
+
+
+
+Ex:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        input:required+span 
+
+        {
+
+            color:red;
+
+            display: inline;
+
+        }
+
+        input:optional+span {
+
+            display: none;
+
+        }
+
+        input:required {
+
+            border:1px solid red;
+
+        }
+
+        input:valid+span {
+
+            display: none;
+
+        }
+
+        input:valid {
+
+            border:1px solid green;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+   <form>
+
+     <div>
+
+        <label>User Name</label>
+
+        <div>
+
+            <input type="text" required> <span>*</span>
+
+        </div>
+
+    </div>
+
+    <div>
+
+        <label>Mobile</label>
+
+        <div>
+
+            <input type="text"> <span>*</span>
+
+        </div>
+
+    </div>
+
+    <div>
+
+        <label>Age</label>
+
+        <div>
+
+            <input type="number" required> <span>*</span>
+
+        </div>
+
+    </div>
+
+    <br>
+
+    <button>Submit</button>
+
+
+
+   </form>
+
+</body>
+
+</html>
+
+
+
+Ex: Required, Valid, Invalid, in-range, out-of-range, optional
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        .UserName:required+span {
+
+            display: inline;
+
+            color:red;
+
+        }
+
+        .UserName:valid~div {
+
+            display: none;
+
+        }
+
+        .UserName:invalid~div {
+
+            display: block;
+
+            color:red;
+
+            font-size: 12px;
+
+        }
+
+        .UserName:valid+span {
+
+            display: none;
+
+        }
+
+        .UserName:invalid+span {
+
+            display: inline;
+
+        }
+
+        .Age:in-range+div {
+
+            display: none;
+
+        }
+
+        .Age:out-of-range+div {
+
+            display: block;
+
+            color:red;
+
+            font-size: 12px;
+
+        }
+
+        .Mobile:valid+div {
+
+            display: none;
+
+        }
+
+        .Mobile:invalid+div {
+
+            display: block;
+
+            color:red;
+
+            font-size: 10px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+   <form>
+
+     <div>
+
+        <label>User Name</label>
+
+        <div>
+
+            <input type="text" class="UserName" required> <span>*</span>
+
+            <div>Name Required</div>
+
+        </div>
+
+    </div>
+
+    <div>
+
+        <label>Age</label>
+
+        <div>
+
+            <input type="number" min="15" max="30" class="Age">
+
+            <div>Age 15 to 30 only</div>
+
+        </div>
+
+    </div>
+
+    <div>
+
+        <label>Mobile</label>
+
+        <div>
+
+            <input type="text" class="Mobile" pattern="\+91\d{10}">
+
+            <div>Invalid Mobile : +91 and 10 digits</div>
+
+        </div>
+
+    </div>
+
+    <br>
+
+    <button>Submit</button>
+
+
+
+   </form>
+
+</body>
+
+</html>
+
+
+
+Summary:
+
+   - Form Element State Classes 
+
+   - Form Validation State Classes 
+
+
+
+
+
+                                                          Multimedia 
+
+- Multimedia refers to animation, audio and video. 
+
+- HTML provides various elements for handling multimedia.
+
+
+
+       a) Marquee
+
+       b) Video
+
+       c) Audio 
+
+       d) Embed 
+
+
+
+Marquee 
+
+   - It sets scrolling and sliding content in page.
+
+   - It is deprecated and no longer recommended for modern web.
+
+
+
+Syntax:
+
+       <marquee> your content </marquee>
+
+
+
+Attributes:
+
+       1. scrollamount            It controls the marquee speed from 1 to 100
+
+       2. direction                It sets scrolling direction left, right, up & down. 
+
+       3. behavior                It sets animation behavior as “alternate”.
+
+       4. loop                        It sets loop count. The number of times to display after load.
+
+       5. bgcolor                    Sets background color.
+
+       6. width    / height            It sets width  & height for marquee content
+
+
+
+Syntax:
+
+   <marquee scrollamount=“20”  loop=“3” direction=“right” bgcolor=“yellow”>
+
+       .. your content …
+
+   </marquee>
+
+
+
+Syntax:
+
+   <marquee behavior=“alternate”>  your content </marquee> 
+
+
+
+2. Audio / Video Elements
+
+
+
+       - HTML supports videos of type  .mp4, .mkv, .mov, .ogg etc.
+
+       - HTML supports audio of type   .mp3, .wav, .midi, etc.
+
+
+
+Syntax:
+
+       <video  src=“path”  poster=“thumbnail.jpg” controls autoplay> </video>
+
+       <audio src=“path”…> </audio>
+
+
+
+Note: “Embed” can embed any audio, video, applet, flash content etc.
+
+         However they are not supported by browsers in modern web.
+
+
+
+
+
+                                               CSS

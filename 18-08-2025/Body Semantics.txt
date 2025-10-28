@@ -1,0 +1,431 @@
+Body Layout
+
+- <div>
+
+- <span>
+
+- Bootstrap Icons
+
+   
+
+Note: For template ideas you can try
+
+       
+
+               themes.getbootstrap.com 
+
+               colorlib.com
+
+
+
+
+
+Semantic Elements for body layout design:
+
+
+
+       <header>
+
+       <footer>
+
+       <section>
+
+       <aside>
+
+       <article>
+
+       <main>
+
+       <nav>
+
+       <address>
+
+
+
+  Bootstrap Theme :  https://themes.getbootstrap.com/preview/?theme_id=37702
+
+
+
+1. Header 
+
+   - It is a semantic container used to display content at top margin of page.
+
+   - Typically header comprises of 
+
+               a) brand name
+
+               b) brand logo
+
+               c) navbar
+
+               d) shortcuts 
+
+               e) search bar etc.
+
+Syntax:
+
+       <header>
+
+           … your content … 
+
+       </header>
+
+
+
+   Note: To access virtual path of project you can use the following:
+
+
+
+                       ./            invokes current folder
+
+                       ../            invokes folder at previous level. [one level back]
+
+                       ../../        two levels back.
+
+
+
+                       /            forward slash for virtual path.    [ localhost/project/images ]
+
+                       \            back slash from physical path.  [ D:\images ]
+
+
+
+2. Aside
+
+       - It describes content aside from current context. 
+
+       - It contains links that navigate user fro current website to any another partner site or 
+
+         a social networking site. 
+
+       - Typically advertisements and social media links are kept in aside. 
+
+
+
+
+
+3. Nav
+
+       - It is used to configure navigation area.
+
+       - Nav comprises of items that navigate used to any named location in the same website.
+
+       - It is used for primary navigation in page.
+
+       - If you are configuring any secondary navigation in page then creating using a <div>
+
+         and set role as “navigation”.
+
+
+
+Syntax:
+
+       <header>
+
+           <nav> Primary Nav Items </nav>
+
+           <div role=“navigation”> Secondary Nav Items </div>
+
+       </header>
+
+
+
+CSS Display Flex:
+
+   - It is a CSS style used for parent element to keep all child elements flexible.
+
+   - You can set flexible direction row or column. [ default is row ]
+
+
+
+                   parent 
+
+                   {
+
+                     display: flex;
+
+                     flex-direction: row | column ;
+
+                   }
+
+
+
+   - You can align elements inside parent by using the attributes
+
+               a) justify-content
+
+               b) align-items
+
+
+
+   - Justify Content can keep elements horizontally and vertically aligned 
+
+               a) baseline     [ if direction is row the its left, if direction column the it is top ]
+
+               b) center
+
+               c) end
+
+               d) space-between
+
+               e) space-around
+
+               f) space-evenly 
+
+
+
+Ex: Shopper Template
+
+
+
+<!DOCTYPE html>
+
+<html lang="en-in">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopper Template</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+        header {
+
+            font-family: Arial;
+
+            font-size: 18px;
+
+            padding: 20px;
+
+        }
+
+        .header-row-1 {
+
+            padding: 20px;
+
+            background-color: #ececec;
+
+            display: flex;
+
+            flex-direction: row;
+
+            justify-content: space-around;
+
+        }
+
+        .aside-nav {
+
+            display: flex;
+
+            flex-direction: row;
+
+            justify-content: space-around;
+
+        }
+
+        aside {
+
+            padding-left: 50px;
+
+        }
+
+        .header-row-1 span {
+
+            padding-left: 10px;
+
+            padding-right: 10px;
+
+        }
+
+        .header-row-2 {
+
+            display: flex;
+
+            flex-direction: row;
+
+            justify-content: space-around;
+
+            align-items: center;
+
+            padding: 30px;
+
+        }
+
+        .brand-title {
+
+            font-size: 28px;
+
+            font-weight: bold;
+
+        }
+
+        nav span {
+
+            padding-left: 10px;
+
+            padding-right: 10px;
+
+            font-size: 22px;
+
+        }
+
+        .shortcuts span {
+
+            padding-left: 10px;
+
+            padding-right: 5px;
+
+        }
+
+        article {
+
+            text-align: center;
+
+            background-color: black;
+
+            color:white;
+
+            padding: 20px;
+
+            font-size: 20px;
+
+            font-family: Arial;
+
+        }
+
+        .bi-lightning-fill {
+
+            color:gold;
+
+        }
+
+        section {
+
+            padding: 20px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header-row-1">
+
+            <div>
+
+                <span class="bi bi-truck"></span>
+
+                <span>FREE SHIPPING WORLD WIDE</span>
+
+                <span>United States <span class="bi bi-chevron-down"></span> </span>
+
+                <span>USD <span class="bi bi-chevron-down"></span> </span>
+
+                <span>English <span class="bi bi-chevron-down"></span> </span>
+
+            </div>
+
+            <div class="aside-nav">
+
+                <div>
+
+                    <span>Shipping</span>
+
+                    <span>FAQ</span>
+
+                    <span>Contact</span>
+
+                </div>
+
+                <div>
+
+                    <aside>
+
+                        <span class="bi bi-facebook"></span>
+
+                        <span class="bi bi-instagram"></span>
+
+                        <span class="bi bi-twitter"></span>
+
+                        <span class="bi bi-youtube"></span>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="header-row-2">
+
+            <div>
+
+                <span class="brand-title">Shopper.</span>
+
+            </div>
+
+            <div>
+
+                <nav>
+
+                    <span>Home</span>
+
+                    <span>Catalog</span>
+
+                    <span>Blog</span>
+
+                    <span>Shop</span>
+
+                    <span>Pages</span>
+
+                    <span>Docs</span>
+
+                </nav>
+
+            </div>
+
+            <div role="navigation" class="shortcuts">
+
+                <span class="bi bi-search"></span>
+
+                <span class="bi bi-person"></span>
+
+                <span class="bi bi-heart"></span>
+
+                <span class="bi bi-cart4"></span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <section>
+
+        <article>
+
+            <span class="bi bi-lightning-fill"></span>
+
+            <span> HAPPY HOLIDAY DEALS ON EVERYTHING </span>
+
+            <span class="bi bi-lightning-fill"></span>
+
+            
+
+        </article>
+
+    </section>
+
+</body>
+
+</html>

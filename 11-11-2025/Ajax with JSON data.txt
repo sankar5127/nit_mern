@@ -1,0 +1,435 @@
+Ex:
+
+1. Data/products.json
+
+
+
+[
+
+    {
+
+    "title": "Apple iPhone 16 (Pink, 266 GB)",
+
+    "price": 79900,
+
+    "rating": {"rate":4.9, "ratings":142456, "reviews":5324},
+
+    "image": "../public/images/iphone-pink.png",
+
+    "offers": [
+
+        "Bank Offer5% cashback on Axis Bank Flipkart Debit Card up to ₹750T&C",
+
+        "Bank Offer5% cashback on Flipkart SBI Credit Card upto ₹4,000 per calendar quarterT&C",
+
+        "Bank Offer5% cashback on Flipkart Axis Bank Credit Card upto ₹4,000 per statement quarterT&C",
+
+        "Bank OfferUp To ₹50 Instant Cashback on BHIM Payments App. Min Order Value ₹199. Offer Valid Once Per UserT&C"
+
+    ]
+
+ },
+
+  {
+
+    "title": "Apple iPhone 16 (Purple, 128 GB)",
+
+    "price": 69900,
+
+    "rating": {"rate":4.5, "ratings":15456, "reviews":324},
+
+    "image": "../public/images/iphone-purple.jpg",
+
+    "offers": [
+
+        "Bank Offer5% cashback on Axis Bank Flipkart Debit Card up to ₹750T&C",
+
+        "Bank Offer5% cashback on Flipkart SBI Credit Card upto ₹4,000 per calendar quarterT&C",
+
+        "Bank Offer5% cashback on Flipkart Axis Bank Credit Card upto ₹4,000 per statement quarterT&C",
+
+        "Bank OfferUp To ₹50 Instant Cashback on BHIM Payments App. Min Order Value ₹199. Offer Valid Once Per UserT&C"
+
+    ]
+
+ },
+
+ {
+
+    "title": "Apple iPhone 16 (White, 128 GB)",
+
+    "price": 69900,
+
+    "rating": {"rate":4.8, "ratings":136456, "reviews":4324},
+
+    "image": "../public/images/iphone-white.png",
+
+    "offers": [
+
+        "Bank Offer5% cashback on Axis Bank Flipkart Debit Card up to ₹750T&C",
+
+        "Bank Offer5% cashback on Flipkart SBI Credit Card upto ₹4,000 per calendar quarterT&C",
+
+        "Bank Offer5% cashback on Flipkart Axis Bank Credit Card upto ₹4,000 per statement quarterT&C",
+
+        "Bank OfferUp To ₹50 Instant Cashback on BHIM Payments App. Min Order Value ₹199. Offer Valid Once Per UserT&C"
+
+    ]
+
+ }
+
+]
+
+
+
+2. Js-examples/products.html
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <script>
+
+        function bodyload(){
+
+             fetch('../data/products.json')
+
+            .then(function(response){
+
+                return response.json();
+
+            })
+
+            .then(function(data){
+
+                 data.map(function(product){
+
+                      var tr = document.createElement("tr");
+
+                      var tdTitle = document.createElement("td");
+
+                      var tdImage = document.createElement("td");
+
+                      var tdPrice = document.createElement("td");
+
+                      var tdRating = document.createElement("td");
+
+
+
+                      tdTitle.textContent = product.title;
+
+                      tdImage.innerHTML = `<img width="100" src="${product.image}">`;
+
+                      tdPrice.textContent = product.price.toLocaleString('en-in', { style: "currency", currency: "INR", minimumFractionDigits: 0 });
+
+                      tdRating.innerHTML = `<span class="badge text-white bg-success p-2 rounded">${product.rating.rate} <span class="bi bi-star-fill"></span> </span> <span class="text-secondary fw-bold mx-2"> ${product.rating.ratings.toLocaleString('en-in')} ratings & ${product.rating.reviews.toLocaleString('en-in')} reviews </span>`;
+
+                        tr.appendChild(tdTitle);
+
+                        tr.appendChild(tdImage);
+
+                        tr.appendChild(tdPrice);
+
+                        tr.appendChild(tdRating);
+
+                        document.getElementById("tblProductsBody").appendChild(tr);
+
+                 })
+
+            })
+
+        }
+
+    </script>
+
+</head>
+
+<body class="container-fluild p-4" onload="bodyload()">
+
+    <table class="table table-hover">
+
+        <thead>
+
+            <tr>
+
+                <th>Title</th>
+
+                <th>Image</th>
+
+                <th>Price</th>
+
+                <th>Rating</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="tblProductsBody">
+
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>
+
+
+
+Ex:  product-cards.html
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <script>
+
+        function bodyload(){
+
+              fetch('../data/products.json')
+
+              .then(function(response) {
+
+                  return response.json();
+
+              })
+
+              .then(function(products) {
+
+                    products.map(function(product){
+
+
+
+                         var div = document.createElement('div');
+
+                         div.className = "card m-2 p-2";
+
+                         div.style.width = "200px";
+
+                         div.innerHTML = `
+
+                              <div class="card-header">
+
+                                   <img src="${product.image}" height="200" class="card-img-top">
+
+                              </div>
+
+                              <div class="card-body">
+
+                                   <div>${product.title}</div>
+
+                                   <div class="fs-2 fw-bold">${product.price.toLocaleString('en-in',{style:"currency", currency:"INR", minimumFractionDigits:0})}</div>
+
+                              </div>
+
+                              <div class="card-footer">
+
+                                 <button class="btn btn-warning w-100 bi bi-cart4"> Add to Cart </button>
+
+                             </div>
+
+                         `;
+
+                            document.querySelector('main').appendChild(div);
+
+                    })
+
+             })
+
+        }
+
+    </script>
+
+</head>
+
+<body class="container-fluid" onload="bodyload()">
+
+    <main class="d-flex">
+
+
+
+    </main>
+
+</body>
+
+</html>
+
+
+
+                                                       Distributed Computing
+
+
+
+- Distributed computing allows communication between two applications running on two different devices.
+
+
+
+- It also allows sharing of information between two different objects running in two different process of same machine. [device]
+
+
+
+Distributed computing technologies:
+
+   
+
+       CORBA            Common Object Request Broken Architecture [ 14+ languages ]
+
+       DCOM                Distribute Component Object Model [ Visual Basic ]
+
+       RMI                    Remote Method Invocation [ J2EE ]
+
+       Java Beans     Java
+
+       Remoting        .NET
+
+       Web Service  All technologies can use [C, Java, .NET, PHP, Python etc..]
+
+  
+
+Communication Specifications:
+
+
+
+       a) SOAP
+
+       b) REST
+
+       c) JSON
+
+
+
+SOAP
+
+   - Service Oriented Architecture Protocol 
+
+   - Consumer sends an XML request.
+
+   - Provider sends an XML response. 
+
+
+
+   Request:
+
+               <Movie>
+
+                   <Genere> Thriller </Genere>
+
+               </Movie>
+
+
+
+   Response:
+
+               <Movies>
+
+                   <Movie>
+
+                       <Title> A </Title>
+
+                       <Director> something </Director>
+
+                       <Genere> Thriller </Genere>
+
+                   </Movie>
+
+                   …
+
+                   …
+
+               </Movies>
+
+
+
+REST
+
+       - Representational State Transfer
+
+       - Consumer sends a simple query request
+
+       - Provider sends XML or JSON response. 
+
+
+
+       Request:
+
+               https://www.netflix.com/genere/thriller 
+
+               https://www.netflix.com/movies?genere=thriller 
+
+
+
+       Response:
+
+               [
+
+                   {  Title: “A”, Director: “something”, Genere: “thriller” }
+
+                   ..
+
+                   ..
+
+               ]
+
+
+
+JSON
+
+       - JavaScript Object Notation
+
+       - Consumer sends JSON request.
+
+       - Provider sends JSON response. 
+
+
+
+Issues with Web Service:    
+
+   - It uses SOAP.
+
+   - It can run on only HTTP or HTTPS protocols. 
+
+   - It can run only on Web Server.
+
+   - Response is always XML.
+
+
+
+API
+
+   - Application Programming Interface
+
+   - It can use REST & JSON.
+
+   - It can run on any protocol.
+
+   - It can run on any server. 
+
+   - It can run on any device or any OS service. 
+
+   - It is light weight & faster.

@@ -1,0 +1,235 @@
+Weather API
+
+
+
+1. Open the following URL 
+
+
+
+       https://openweathermap.org/
+
+
+
+2. Signup for a free account 
+
+
+
+3. Sign-in into account
+
+
+
+4. Go to your profile and get API key. 
+
+
+
+           1318ca6725c69160d346c41fc0612596
+
+
+
+5. Go to “API” category [ nav-bar ] 
+
+
+
+6. Go to “Current Weather Data” 
+
+
+
+7. Click “API DOC” 
+
+
+
+8. Select “Built-In API Request by City Name”  [right panel]
+
+
+
+9. It will show list of API calls [ select and copy the API call for city name ]
+
+
+
+   https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={api_key}
+
+
+
+   https://api.openweathermap.org/data/2.5/weather?q=Hyderabad&appid=1318ca6725c69160d346c41fc0612596
+
+
+
+10. To test API request methods you can download and install API debugging tools like
+
+           a) Postman [download]  
+
+           b) Fiddler
+
+           c) Swagger etc.
+
+
+
+       https://www.postman.com/downloads/        
+
+Note: Add “units” parameter with metric as value to change the unit type of values returned.
+
+
+
+       https://api.openweathermap.org/data/2.5/weather?q=Hyderabad&appid=1318ca6725c69160d346c41fc0612596&units=metric
+
+
+
+       Test in postman - New Request > GET > URL > Send
+
+
+
+Create UI for weather application:
+
+
+
+1. Sign-in into google “stitch” 
+
+       
+
+           https://stitch.withgoogle.com
+
+
+
+2. Go to “Web” category and enter a prompt for your requirement 
+
+
+
+         - Create a weather web application Home Page
+
+         - Add a search bar to search by city name and get the weather of relative city.
+
+         - Display weather details in same page like temperature, city name, weather description, humidity & wind speed.
+
+
+
+3. Src/scripts/weather.js
+
+
+
+
+
+var API_KEY = '1318ca6725c69160d346c41fc0612596';
+
+
+
+function LoadWeatherData(){
+
+    var cityName = document.getElementById("txtCity").value;
+
+
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric`)
+
+    .then(function(response){
+
+        return response.json();
+
+    })
+
+    .then(function(data){
+
+         document.getElementById("lblCity").textContent = data.name;
+
+         document.getElementById("lblTemp").innerHTML = `${data.main.temp}&deg; C`;
+
+         document.getElementById("lblDescription").innerHTML = data.weather[0].description.toUpperCase();
+
+    })
+
+}
+
+
+
+function SearchClick(){
+
+    document.getElementById("detailsCard").style.display = "block";
+
+    LoadWeatherData();
+
+}
+
+
+
+4. Js-examples/weather.html
+
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <script src="../src/scripts/weather.js"></script>
+
+</head>
+
+<body class="container-fluid bg-dark d-flex justify-content-center">
+
+    <div class="mt-2">
+
+        <div class="text-center fw-bold fs-3">Find You Local Weather Forecast </div>
+
+        <div class="my-5">
+
+            <div class="input-group">
+
+                <button onclick="SearchClick()" class="btn btn-warning bi bi-search"></button>
+
+                <input id="txtCity" type="text" class="form-control" placeholder="Your city eg: Hyderabad, Delhi, Chennai"> 
+
+            </div>
+
+        </div>
+
+        <div id="detailsCard" style="display: none;" class="my-5 bg-light card p-2" style="height: 250px;">
+
+            <div class="card-header">
+
+                <div class="d-flex justify-content-between">
+
+                    <span id="lblCity" class="fw-bold"></span>
+
+                    <span class="bi bi-geo-alt"> Current Location</span>
+
+                </div>
+
+            </div>
+
+            <div class="card-body fs-1">
+
+               <div>
+
+                <span class="bi bi-cloud-sun-fill"></span> <span class="fw-bold" id="lblTemp"></span>
+
+               </div>
+
+               <div>
+
+                <span id="lblDescription" class="fs-6 text-secondary"></span>
+
+               </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    
+
+</body>
+
+</html>
